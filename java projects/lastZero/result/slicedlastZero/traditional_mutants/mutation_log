@@ -1,0 +1,29 @@
+AORS_1:9:int_lastZero(int):i++ => i--
+AODU_1:14:int_lastZero(int):-1 => 1
+AOIU_1:11:int_lastZero(int):i => -i
+AOIS_1:9:int_lastZero(int):i => ++i
+AOIS_2:9:int_lastZero(int):i => --i
+AOIS_3:9:int_lastZero(int):i => i++
+AOIS_4:9:int_lastZero(int):i => i--
+AOIS_5:9:int_lastZero(int):x.length => ++x.length
+AOIS_6:9:int_lastZero(int):x.length => --x.length
+AOIS_7:9:int_lastZero(int):x.length => x.length++
+AOIS_8:9:int_lastZero(int):x.length => x.length--
+AOIS_9:10:int_lastZero(int):i => ++i
+AOIS_10:10:int_lastZero(int):i => --i
+AOIS_11:10:int_lastZero(int):i => i++
+AOIS_12:10:int_lastZero(int):i => i--
+AOIS_13:11:int_lastZero(int):i => i++
+AOIS_14:11:int_lastZero(int):i => i--
+ROR_1:10:int_lastZero(int): x[i] >= 0  =>   x[i] > 0
+ROR_2:10:int_lastZero(int): x[i] >= 0  =>   x[i] < 0
+ROR_3:10:int_lastZero(int): x[i] >= 0  =>   x[i] <= 0
+ROR_4:10:int_lastZero(int): x[i] >= 0  =>   x[i] == 0
+ROR_5:10:int_lastZero(int): x[i] >= 0  =>   x[i] != 0
+COI_1:9:int_lastZero(int): i < x.length  =>  !(i < x.length)
+COI_2:10:int_lastZero(int): x[i] >= 0  =>  !(x[i] >= 0)
+LOI_1:9:int_lastZero(int):i => ~i
+LOI_2:9:int_lastZero(int):x.length => -x.length
+LOI_3:9:int_lastZero(int):i => ~i
+LOI_4:10:int_lastZero(int):i => ~i
+LOI_5:11:int_lastZero(int):i => ~i

@@ -1,0 +1,8 @@
+JSD_1:7:static is deleted
+JSD_2:9:static is deleted
+JSD_3:11:static is deleted
+JSD_4:13:static is deleted
+JID_1:7:static int min0 => static int min;
+JID_2:9:static int diff0 => static int diff;
+JID_3:11:static int same0 => static int same;
+JID_4:13:static int zero0 => static int zero;

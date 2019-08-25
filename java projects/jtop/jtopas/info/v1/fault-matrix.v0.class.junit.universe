@@ -1,0 +1,45 @@
+	2 listversions
+	7 listtests
+CLASSPATH=/nfs/spectre/u5/dohy/Galileo/gal:/nfs/spectre/u5/dohy/Galileo/gal/BCEL:/nfs/spectre/u5/dohy/Galileo/gal/galileo/lib/commons-collections.jar:/nfs/spectre/u5/dohy/Prior/jtopas/source:/nfs/spectre/u5/dohy/Prior/jtopas/source/junit:.
+-P[de.susebox.java.util.TestTokenizerProperties] -X[RemoveTime.sh 1]
+-P[de.susebox.java.util.TestTokenProperties] -X[RemoveTime.sh 2]
+-P[de.susebox.java.util.TestInputStreamTokenizer] -X[RemoveTime.sh 3]
+-P[de.susebox.java.util.TestDifficultSituations] -X[RemoveTime.sh 4]
+-P[de.susebox.java.util.TestEmbeddedTokenizer] -X[RemoveTime.sh 5]
+-P[de.susebox.jtopas.TestPluginTokenizer] -X[RemoveTime.sh 6]
+-P[de.susebox.jtopas.TestTokenizerSpeed] -X[RemoveTime.sh 7]
+unitest0:
+v1:
+	0
+v2:
+	0
+unitest1:
+v1:
+	0
+v2:
+	0
+unitest2:
+v1:
+	1
+v2:
+	0
+unitest3:
+v1:
+	0
+v2:
+	0
+unitest4:
+v1:
+	1
+v2:
+	1
+unitest5:
+v1:
+	0
+v2:
+	0
+unitest6:
+v1:
+	0
+v2:
+	0

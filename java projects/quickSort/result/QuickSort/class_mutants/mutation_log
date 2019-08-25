@@ -1,0 +1,4 @@
+OAN_1:9:quickSort( list, 0, list.length - 1 ) => quickSort(list)
+OAN_2:16:quickSort( list, first, pivotIndex - 1 ) => quickSort(list)
+OAN_3:17:quickSort( list, pivotIndex + 1, last ) => quickSort(list)
+OMR_1:14:quickSort(list,first,last) => quickSort(list);

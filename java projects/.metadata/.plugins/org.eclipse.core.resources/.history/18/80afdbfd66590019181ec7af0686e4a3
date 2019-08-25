@@ -1,0 +1,28 @@
+import junit.framework.TestCase;
+
+
+public class maxTest extends TestCase {
+
+
+	public maxTest(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+	muse m1 = new muse();
+	
+	public void testT0(){
+		assertEquals(3, m1.Set_Max(3, 1));
+	}
+	public void testT1(){
+		assertEquals(5,m1.Set_Max(5, -4));
+	}
+	public void testT2(){
+		assertEquals(0 , m1.Set_Max(0, -4));
+	}
+	public void testT3(){
+		assertEquals(7 , m1.Set_Max(0, 7));
+	}
+	public void testT4(){
+		assertEquals(3, m1.Set_Max(-1, 3));
+	}
+}

@@ -1,0 +1,93 @@
+AORB_1:20:int_Set_Min(int,int):x * y => x / y
+AORB_2:20:int_Set_Min(int,int):x * y => x % y
+AORB_3:20:int_Set_Min(int,int):x * y => x + y
+AORB_4:20:int_Set_Min(int,int):x * y => x - y
+AORB_5:21:int_Set_Min(int,int):diff + 1 => diff * 1
+AORB_6:21:int_Set_Min(int,int):diff + 1 => diff / 1
+AORB_7:21:int_Set_Min(int,int):diff + 1 => diff % 1
+AORB_8:21:int_Set_Min(int,int):diff + 1 => diff - 1
+AORB_9:23:int_Set_Min(int,int):x * y => x / y
+AORB_10:23:int_Set_Min(int,int):x * y => x % y
+AORB_11:23:int_Set_Min(int,int):x * y => x + y
+AORB_12:23:int_Set_Min(int,int):x * y => x - y
+AORB_13:24:int_Set_Min(int,int):same + 1 => same * 1
+AORB_14:24:int_Set_Min(int,int):same + 1 => same / 1
+AORB_15:24:int_Set_Min(int,int):same + 1 => same % 1
+AORB_16:24:int_Set_Min(int,int):same + 1 => same - 1
+AORB_17:26:int_Set_Min(int,int):zero + 1 => zero * 1
+AORB_18:26:int_Set_Min(int,int):zero + 1 => zero / 1
+AORB_19:26:int_Set_Min(int,int):zero + 1 => zero % 1
+AORB_20:26:int_Set_Min(int,int):zero + 1 => zero - 1
+AODU_1:17:int_Set_Min(int,int):-x => x
+AOIU_1:19:int_Set_Min(int,int):y => -y
+AOIU_2:21:int_Set_Min(int,int):diff => -diff
+AOIU_3:24:int_Set_Min(int,int):same => -same
+AOIU_4:26:int_Set_Min(int,int):zero => -zero
+AOIU_5:30:int_Set_Min(int,int):min => -min
+AOIS_1:18:int_Set_Min(int,int):min => ++min
+AOIS_2:18:int_Set_Min(int,int):min => --min
+AOIS_3:18:int_Set_Min(int,int):min => min++
+AOIS_4:18:int_Set_Min(int,int):min => min--
+AOIS_5:18:int_Set_Min(int,int):y => ++y
+AOIS_6:18:int_Set_Min(int,int):y => --y
+AOIS_7:18:int_Set_Min(int,int):y => y++
+AOIS_8:18:int_Set_Min(int,int):y => y--
+AOIS_9:19:int_Set_Min(int,int):y => ++y
+AOIS_10:19:int_Set_Min(int,int):y => --y
+AOIS_11:19:int_Set_Min(int,int):y => y++
+AOIS_12:19:int_Set_Min(int,int):y => y--
+AOIS_13:20:int_Set_Min(int,int):x => ++x
+AOIS_14:20:int_Set_Min(int,int):x => --x
+AOIS_15:20:int_Set_Min(int,int):x => x++
+AOIS_16:20:int_Set_Min(int,int):x => x--
+AOIS_17:20:int_Set_Min(int,int):y => ++y
+AOIS_18:20:int_Set_Min(int,int):y => --y
+AOIS_19:20:int_Set_Min(int,int):y => y++
+AOIS_20:20:int_Set_Min(int,int):y => y--
+AOIS_21:21:int_Set_Min(int,int):diff => ++diff
+AOIS_22:21:int_Set_Min(int,int):diff => --diff
+AOIS_23:21:int_Set_Min(int,int):diff => diff++
+AOIS_24:21:int_Set_Min(int,int):diff => diff--
+AOIS_25:23:int_Set_Min(int,int):x => ++x
+AOIS_26:23:int_Set_Min(int,int):x => --x
+AOIS_27:23:int_Set_Min(int,int):x => x++
+AOIS_28:23:int_Set_Min(int,int):x => x--
+AOIS_29:23:int_Set_Min(int,int):y => ++y
+AOIS_30:23:int_Set_Min(int,int):y => --y
+AOIS_31:23:int_Set_Min(int,int):y => y++
+AOIS_32:23:int_Set_Min(int,int):y => y--
+AOIS_33:24:int_Set_Min(int,int):same => ++same
+AOIS_34:24:int_Set_Min(int,int):same => --same
+AOIS_35:24:int_Set_Min(int,int):same => same++
+AOIS_36:24:int_Set_Min(int,int):same => same--
+AOIS_37:26:int_Set_Min(int,int):zero => ++zero
+AOIS_38:26:int_Set_Min(int,int):zero => --zero
+AOIS_39:26:int_Set_Min(int,int):zero => zero++
+AOIS_40:26:int_Set_Min(int,int):zero => zero--
+AOIS_41:30:int_Set_Min(int,int):min => min++
+AOIS_42:30:int_Set_Min(int,int):min => min--
+ROR_1:18:int_Set_Min(int,int): min > y  =>   min >= y
+ROR_2:18:int_Set_Min(int,int): min > y  =>   min < y
+ROR_3:18:int_Set_Min(int,int): min > y  =>   min <= y
+ROR_4:18:int_Set_Min(int,int): min > y  =>   min == y
+ROR_5:18:int_Set_Min(int,int): min > y  =>   min != y
+ROR_6:23:int_Set_Min(int,int): x * y > 0  =>   x * y >= 0
+ROR_7:23:int_Set_Min(int,int): x * y > 0  =>   x * y < 0
+ROR_8:23:int_Set_Min(int,int): x * y > 0  =>   x * y <= 0
+ROR_9:23:int_Set_Min(int,int): x * y > 0  =>   x * y == 0
+ROR_10:23:int_Set_Min(int,int): x * y > 0  =>   x * y != 0
+COI_1:18:int_Set_Min(int,int): min > y  =>  !(min > y)
+COI_2:20:int_Set_Min(int,int): x * y < 0  =>  !(x * y < 0)
+COI_3:23:int_Set_Min(int,int): x * y > 0  =>  !(x * y > 0)
+LOI_1:17:int_Set_Min(int,int):x => ~x
+LOI_2:18:int_Set_Min(int,int):min => ~min
+LOI_3:18:int_Set_Min(int,int):y => ~y
+LOI_4:19:int_Set_Min(int,int):y => ~y
+LOI_5:20:int_Set_Min(int,int):x => ~x
+LOI_6:20:int_Set_Min(int,int):y => ~y
+LOI_7:21:int_Set_Min(int,int):diff => ~diff
+LOI_8:23:int_Set_Min(int,int):x => ~x
+LOI_9:23:int_Set_Min(int,int):y => ~y
+LOI_10:24:int_Set_Min(int,int):same => ~same
+LOI_11:26:int_Set_Min(int,int):zero => ~zero
+LOI_12:30:int_Set_Min(int,int):min => ~min

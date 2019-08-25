@@ -1,0 +1,6 @@
+Queue()
+void_enqueue(java.lang.Object)
+java.lang.Object_dequeue()
+boolean_isEmpty()
+boolean_isFull()
+java.lang.String_toString()

@@ -1,0 +1,20 @@
+JTopas - Java tokenizer and parser tools:
+-----------------------------------------
+
+JTopas consists of several parts:
+
+- the JTopas Core Library
+- the JTopas Test Suite
+
+JTopas comes under the the GNU Lesser General Public License (LGPL).
+
+
+Licenses:
+---------
+
+The Lesser General Public License (LGPL) can be found in:
+	GNU-LGPL.txt.
+It is copyrighted by the Free Software Foundation.
+
+The source code, libraries and programs of JTopas are copyrighted by
+the authors who actually wrote it.

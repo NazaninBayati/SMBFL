@@ -1,0 +1,282 @@
+AORB_1:9:void_quickSort(int):list.length - 1 => list.length * 1
+AORB_2:9:void_quickSort(int):list.length - 1 => list.length / 1
+AORB_3:9:void_quickSort(int):list.length - 1 => list.length % 1
+AORB_4:9:void_quickSort(int):list.length - 1 => list.length + 1
+AORB_5:16:void_quickSort(int,int,int):pivotIndex - 1 => pivotIndex * 1
+AORB_6:16:void_quickSort(int,int,int):pivotIndex - 1 => pivotIndex / 1
+AORB_7:16:void_quickSort(int,int,int):pivotIndex - 1 => pivotIndex % 1
+AORB_8:16:void_quickSort(int,int,int):pivotIndex - 1 => pivotIndex + 1
+AORB_9:17:void_quickSort(int,int,int):pivotIndex + 1 => pivotIndex * 1
+AORB_10:17:void_quickSort(int,int,int):pivotIndex + 1 => pivotIndex / 1
+AORB_11:17:void_quickSort(int,int,int):pivotIndex + 1 => pivotIndex % 1
+AORB_12:17:void_quickSort(int,int,int):pivotIndex + 1 => pivotIndex - 1
+AORB_13:24:int_partition(int,int,int):first + 1 => first * 1
+AORB_14:24:int_partition(int,int,int):first + 1 => first / 1
+AORB_15:24:int_partition(int,int,int):first + 1 => first % 1
+AORB_16:24:int_partition(int,int,int):first + 1 => first - 1
+AORS_1:28:int_partition(int,int,int):low++ => low--
+AORS_2:31:int_partition(int,int,int):high-- => high++
+AORS_3:40:int_partition(int,int,int):high-- => high++
+AODS_1:28:int_partition(int,int,int):low++ => low
+AODS_2:31:int_partition(int,int,int):high-- => high
+AODS_3:40:int_partition(int,int,int):high-- => high
+AOIU_1:9:void_quickSort(int):list.length => -list.length
+AOIU_2:15:void_quickSort(int,int,int):first => -first
+AOIU_3:15:void_quickSort(int,int,int):last => -last
+AOIU_4:16:void_quickSort(int,int,int):first => -first
+AOIU_5:16:void_quickSort(int,int,int):pivotIndex => -pivotIndex
+AOIU_6:17:void_quickSort(int,int,int):pivotIndex => -pivotIndex
+AOIU_7:17:void_quickSort(int,int,int):last => -last
+AOIU_8:23:int_partition(int,int,int):first => -first
+AOIU_9:24:int_partition(int,int,int):first => -first
+AOIU_10:25:int_partition(int,int,int):last => -last
+AOIU_11:34:int_partition(int,int,int):high => -high
+AOIU_12:35:int_partition(int,int,int):low => -low
+AOIU_13:36:int_partition(int,int,int):temp => -temp
+AOIU_14:43:int_partition(int,int,int):high => -high
+AOIU_15:44:int_partition(int,int,int):pivot => -pivot
+AOIU_16:45:int_partition(int,int,int):high => -high
+AOIU_17:47:int_partition(int,int,int):first => -first
+AOIS_1:9:void_quickSort(int):list.length => ++list.length
+AOIS_2:9:void_quickSort(int):list.length => --list.length
+AOIS_3:9:void_quickSort(int):list.length => list.length++
+AOIS_4:9:void_quickSort(int):list.length => list.length--
+AOIS_5:14:void_quickSort(int,int,int):last => ++last
+AOIS_6:14:void_quickSort(int,int,int):last => --last
+AOIS_7:14:void_quickSort(int,int,int):last => last++
+AOIS_8:14:void_quickSort(int,int,int):last => last--
+AOIS_9:14:void_quickSort(int,int,int):first => ++first
+AOIS_10:14:void_quickSort(int,int,int):first => --first
+AOIS_11:14:void_quickSort(int,int,int):first => first++
+AOIS_12:14:void_quickSort(int,int,int):first => first--
+AOIS_13:15:void_quickSort(int,int,int):first => first++
+AOIS_14:15:void_quickSort(int,int,int):first => first--
+AOIS_15:15:void_quickSort(int,int,int):last => last++
+AOIS_16:15:void_quickSort(int,int,int):last => last--
+AOIS_17:16:void_quickSort(int,int,int):first => first++
+AOIS_18:16:void_quickSort(int,int,int):first => first--
+AOIS_19:16:void_quickSort(int,int,int):pivotIndex => ++pivotIndex
+AOIS_20:16:void_quickSort(int,int,int):pivotIndex => --pivotIndex
+AOIS_21:16:void_quickSort(int,int,int):pivotIndex => pivotIndex++
+AOIS_22:16:void_quickSort(int,int,int):pivotIndex => pivotIndex--
+AOIS_23:17:void_quickSort(int,int,int):pivotIndex => ++pivotIndex
+AOIS_24:17:void_quickSort(int,int,int):pivotIndex => --pivotIndex
+AOIS_25:17:void_quickSort(int,int,int):pivotIndex => pivotIndex++
+AOIS_26:17:void_quickSort(int,int,int):pivotIndex => pivotIndex--
+AOIS_27:17:void_quickSort(int,int,int):last => last++
+AOIS_28:17:void_quickSort(int,int,int):last => last--
+AOIS_29:23:int_partition(int,int,int):first => first++
+AOIS_30:23:int_partition(int,int,int):first => first--
+AOIS_31:24:int_partition(int,int,int):first => ++first
+AOIS_32:24:int_partition(int,int,int):first => --first
+AOIS_33:24:int_partition(int,int,int):first => first++
+AOIS_34:24:int_partition(int,int,int):first => first--
+AOIS_35:25:int_partition(int,int,int):last => last++
+AOIS_36:25:int_partition(int,int,int):last => last--
+AOIS_37:26:int_partition(int,int,int):high => ++high
+AOIS_38:26:int_partition(int,int,int):high => --high
+AOIS_39:26:int_partition(int,int,int):high => high++
+AOIS_40:26:int_partition(int,int,int):high => high--
+AOIS_41:26:int_partition(int,int,int):low => ++low
+AOIS_42:26:int_partition(int,int,int):low => --low
+AOIS_43:26:int_partition(int,int,int):low => low++
+AOIS_44:26:int_partition(int,int,int):low => low--
+AOIS_45:27:int_partition(int,int,int):low => ++low
+AOIS_46:27:int_partition(int,int,int):low => --low
+AOIS_47:27:int_partition(int,int,int):low => low++
+AOIS_48:27:int_partition(int,int,int):low => low--
+AOIS_49:27:int_partition(int,int,int):high => ++high
+AOIS_50:27:int_partition(int,int,int):high => --high
+AOIS_51:27:int_partition(int,int,int):high => high++
+AOIS_52:27:int_partition(int,int,int):high => high--
+AOIS_53:27:int_partition(int,int,int):low => ++low
+AOIS_54:27:int_partition(int,int,int):low => --low
+AOIS_55:27:int_partition(int,int,int):low => low++
+AOIS_56:27:int_partition(int,int,int):low => low--
+AOIS_57:27:int_partition(int,int,int):pivot => ++pivot
+AOIS_58:27:int_partition(int,int,int):pivot => --pivot
+AOIS_59:27:int_partition(int,int,int):pivot => pivot++
+AOIS_60:27:int_partition(int,int,int):pivot => pivot--
+AOIS_61:30:int_partition(int,int,int):low => ++low
+AOIS_62:30:int_partition(int,int,int):low => --low
+AOIS_63:30:int_partition(int,int,int):low => low++
+AOIS_64:30:int_partition(int,int,int):low => low--
+AOIS_65:30:int_partition(int,int,int):high => ++high
+AOIS_66:30:int_partition(int,int,int):high => --high
+AOIS_67:30:int_partition(int,int,int):high => high++
+AOIS_68:30:int_partition(int,int,int):high => high--
+AOIS_69:30:int_partition(int,int,int):high => ++high
+AOIS_70:30:int_partition(int,int,int):high => --high
+AOIS_71:30:int_partition(int,int,int):high => high++
+AOIS_72:30:int_partition(int,int,int):high => high--
+AOIS_73:30:int_partition(int,int,int):pivot => ++pivot
+AOIS_74:30:int_partition(int,int,int):pivot => --pivot
+AOIS_75:30:int_partition(int,int,int):pivot => pivot++
+AOIS_76:30:int_partition(int,int,int):pivot => pivot--
+AOIS_77:33:int_partition(int,int,int):high => ++high
+AOIS_78:33:int_partition(int,int,int):high => --high
+AOIS_79:33:int_partition(int,int,int):high => high++
+AOIS_80:33:int_partition(int,int,int):high => high--
+AOIS_81:33:int_partition(int,int,int):low => ++low
+AOIS_82:33:int_partition(int,int,int):low => --low
+AOIS_83:33:int_partition(int,int,int):low => low++
+AOIS_84:33:int_partition(int,int,int):low => low--
+AOIS_85:34:int_partition(int,int,int):high => high++
+AOIS_86:34:int_partition(int,int,int):high => high--
+AOIS_87:35:int_partition(int,int,int):low => ++low
+AOIS_88:35:int_partition(int,int,int):low => --low
+AOIS_89:35:int_partition(int,int,int):low => low++
+AOIS_90:35:int_partition(int,int,int):low => low--
+AOIS_91:36:int_partition(int,int,int):temp => ++temp
+AOIS_92:36:int_partition(int,int,int):temp => --temp
+AOIS_93:36:int_partition(int,int,int):temp => temp++
+AOIS_94:36:int_partition(int,int,int):temp => temp--
+AOIS_95:39:int_partition(int,int,int):high => ++high
+AOIS_96:39:int_partition(int,int,int):high => --high
+AOIS_97:39:int_partition(int,int,int):high => high++
+AOIS_98:39:int_partition(int,int,int):high => high--
+AOIS_99:39:int_partition(int,int,int):first => ++first
+AOIS_100:39:int_partition(int,int,int):first => --first
+AOIS_101:39:int_partition(int,int,int):first => first++
+AOIS_102:39:int_partition(int,int,int):first => first--
+AOIS_103:39:int_partition(int,int,int):high => ++high
+AOIS_104:39:int_partition(int,int,int):high => --high
+AOIS_105:39:int_partition(int,int,int):high => high++
+AOIS_106:39:int_partition(int,int,int):high => high--
+AOIS_107:39:int_partition(int,int,int):pivot => ++pivot
+AOIS_108:39:int_partition(int,int,int):pivot => --pivot
+AOIS_109:39:int_partition(int,int,int):pivot => pivot++
+AOIS_110:39:int_partition(int,int,int):pivot => pivot--
+AOIS_111:42:int_partition(int,int,int):pivot => ++pivot
+AOIS_112:42:int_partition(int,int,int):pivot => --pivot
+AOIS_113:42:int_partition(int,int,int):pivot => pivot++
+AOIS_114:42:int_partition(int,int,int):pivot => pivot--
+AOIS_115:42:int_partition(int,int,int):high => ++high
+AOIS_116:42:int_partition(int,int,int):high => --high
+AOIS_117:42:int_partition(int,int,int):high => high++
+AOIS_118:42:int_partition(int,int,int):high => high--
+AOIS_119:43:int_partition(int,int,int):high => ++high
+AOIS_120:43:int_partition(int,int,int):high => --high
+AOIS_121:43:int_partition(int,int,int):high => high++
+AOIS_122:43:int_partition(int,int,int):high => high--
+AOIS_123:44:int_partition(int,int,int):pivot => ++pivot
+AOIS_124:44:int_partition(int,int,int):pivot => --pivot
+AOIS_125:44:int_partition(int,int,int):pivot => pivot++
+AOIS_126:44:int_partition(int,int,int):pivot => pivot--
+AOIS_127:45:int_partition(int,int,int):high => high++
+AOIS_128:45:int_partition(int,int,int):high => high--
+AOIS_129:47:int_partition(int,int,int):first => first++
+AOIS_130:47:int_partition(int,int,int):first => first--
+ROR_1:14:void_quickSort(int,int,int): last > first  =>   last >= first
+ROR_2:14:void_quickSort(int,int,int): last > first  =>   last < first
+ROR_3:14:void_quickSort(int,int,int): last > first  =>   last <= first
+ROR_4:14:void_quickSort(int,int,int): last > first  =>   last == first
+ROR_5:14:void_quickSort(int,int,int): last > first  =>   last != first
+ROR_6:26:int_partition(int,int,int): high > low  =>   high >= low
+ROR_7:26:int_partition(int,int,int): high > low  =>   high < low
+ROR_8:26:int_partition(int,int,int): high > low  =>   high <= low
+ROR_9:26:int_partition(int,int,int): high > low  =>   high == low
+ROR_10:26:int_partition(int,int,int): high > low  =>   high != low
+ROR_11:27:int_partition(int,int,int): low <= high  =>   low > high
+ROR_12:27:int_partition(int,int,int): low <= high  =>   low >= high
+ROR_13:27:int_partition(int,int,int): low <= high  =>   low < high
+ROR_14:27:int_partition(int,int,int): low <= high  =>   low == high
+ROR_15:27:int_partition(int,int,int): low <= high  =>   low != high
+ROR_16:27:int_partition(int,int,int): list[low] <= pivot  =>   list[low] > pivot
+ROR_17:27:int_partition(int,int,int): list[low] <= pivot  =>   list[low] >= pivot
+ROR_18:27:int_partition(int,int,int): list[low] <= pivot  =>   list[low] < pivot
+ROR_19:27:int_partition(int,int,int): list[low] <= pivot  =>   list[low] == pivot
+ROR_20:27:int_partition(int,int,int): list[low] <= pivot  =>   list[low] != pivot
+ROR_21:30:int_partition(int,int,int): low <= high  =>   low > high
+ROR_22:30:int_partition(int,int,int): low <= high  =>   low >= high
+ROR_23:30:int_partition(int,int,int): low <= high  =>   low < high
+ROR_24:30:int_partition(int,int,int): low <= high  =>   low == high
+ROR_25:30:int_partition(int,int,int): low <= high  =>   low != high
+ROR_26:30:int_partition(int,int,int): list[high] > pivot  =>   list[high] >= pivot
+ROR_27:30:int_partition(int,int,int): list[high] > pivot  =>   list[high] < pivot
+ROR_28:30:int_partition(int,int,int): list[high] > pivot  =>   list[high] <= pivot
+ROR_29:30:int_partition(int,int,int): list[high] > pivot  =>   list[high] == pivot
+ROR_30:30:int_partition(int,int,int): list[high] > pivot  =>   list[high] != pivot
+ROR_31:33:int_partition(int,int,int): high > low  =>   high >= low
+ROR_32:33:int_partition(int,int,int): high > low  =>   high < low
+ROR_33:33:int_partition(int,int,int): high > low  =>   high <= low
+ROR_34:33:int_partition(int,int,int): high > low  =>   high == low
+ROR_35:33:int_partition(int,int,int): high > low  =>   high != low
+ROR_36:39:int_partition(int,int,int): high > first  =>   high >= first
+ROR_37:39:int_partition(int,int,int): high > first  =>   high < first
+ROR_38:39:int_partition(int,int,int): high > first  =>   high <= first
+ROR_39:39:int_partition(int,int,int): high > first  =>   high == first
+ROR_40:39:int_partition(int,int,int): high > first  =>   high != first
+ROR_41:39:int_partition(int,int,int): list[high] >= pivot  =>   list[high] > pivot
+ROR_42:39:int_partition(int,int,int): list[high] >= pivot  =>   list[high] < pivot
+ROR_43:39:int_partition(int,int,int): list[high] >= pivot  =>   list[high] <= pivot
+ROR_44:39:int_partition(int,int,int): list[high] >= pivot  =>   list[high] == pivot
+ROR_45:39:int_partition(int,int,int): list[high] >= pivot  =>   list[high] != pivot
+ROR_46:42:int_partition(int,int,int): pivot > list[high]  =>   pivot >= list[high]
+ROR_47:42:int_partition(int,int,int): pivot > list[high]  =>   pivot < list[high]
+ROR_48:42:int_partition(int,int,int): pivot > list[high]  =>   pivot <= list[high]
+ROR_49:42:int_partition(int,int,int): pivot > list[high]  =>   pivot == list[high]
+ROR_50:42:int_partition(int,int,int): pivot > list[high]  =>   pivot != list[high]
+COR_1:27:int_partition(int,int,int): low <= high && list[low] <= pivot  =>   low <= high || list[low] <= pivot
+COR_2:27:int_partition(int,int,int): low <= high && list[low] <= pivot  =>   low <= high ^ list[low] <= pivot
+COR_3:30:int_partition(int,int,int): low <= high && list[high] > pivot  =>   low <= high || list[high] > pivot
+COR_4:30:int_partition(int,int,int): low <= high && list[high] > pivot  =>   low <= high ^ list[high] > pivot
+COR_5:39:int_partition(int,int,int): high > first && list[high] >= pivot  =>   high > first || list[high] >= pivot
+COR_6:39:int_partition(int,int,int): high > first && list[high] >= pivot  =>   high > first ^ list[high] >= pivot
+COI_1:14:void_quickSort(int,int,int): last > first  =>  !(last > first)
+COI_2:26:int_partition(int,int,int): high > low  =>  !(high > low)
+COI_3:27:int_partition(int,int,int): low <= high  =>  !(low <= high)
+COI_4:27:int_partition(int,int,int): list[low] <= pivot  =>  !(list[low] <= pivot)
+COI_5:27:int_partition(int,int,int): low <= high && list[low] <= pivot  =>  !(low <= high && list[low] <= pivot)
+COI_6:30:int_partition(int,int,int): low <= high  =>  !(low <= high)
+COI_7:30:int_partition(int,int,int): list[high] > pivot  =>  !(list[high] > pivot)
+COI_8:30:int_partition(int,int,int): low <= high && list[high] > pivot  =>  !(low <= high && list[high] > pivot)
+COI_9:33:int_partition(int,int,int): high > low  =>  !(high > low)
+COI_10:39:int_partition(int,int,int): high > first  =>  !(high > first)
+COI_11:39:int_partition(int,int,int): list[high] >= pivot  =>  !(list[high] >= pivot)
+COI_12:39:int_partition(int,int,int): high > first && list[high] >= pivot  =>  !(high > first && list[high] >= pivot)
+COI_13:42:int_partition(int,int,int): pivot > list[high]  =>  !(pivot > list[high])
+LOI_1:9:void_quickSort(int):list.length => -list.length
+LOI_2:14:void_quickSort(int,int,int):last => ~last
+LOI_3:14:void_quickSort(int,int,int):first => ~first
+LOI_4:15:void_quickSort(int,int,int):first => ~first
+LOI_5:15:void_quickSort(int,int,int):last => ~last
+LOI_6:16:void_quickSort(int,int,int):first => ~first
+LOI_7:16:void_quickSort(int,int,int):pivotIndex => ~pivotIndex
+LOI_8:17:void_quickSort(int,int,int):pivotIndex => ~pivotIndex
+LOI_9:17:void_quickSort(int,int,int):last => ~last
+LOI_10:23:int_partition(int,int,int):first => ~first
+LOI_11:24:int_partition(int,int,int):first => ~first
+LOI_12:25:int_partition(int,int,int):last => ~last
+LOI_13:26:int_partition(int,int,int):high => ~high
+LOI_14:26:int_partition(int,int,int):low => ~low
+LOI_15:27:int_partition(int,int,int):low => ~low
+LOI_16:27:int_partition(int,int,int):high => ~high
+LOI_17:27:int_partition(int,int,int):low => ~low
+LOI_18:27:int_partition(int,int,int):pivot => ~pivot
+LOI_19:28:int_partition(int,int,int):low => ~low
+LOI_20:30:int_partition(int,int,int):low => ~low
+LOI_21:30:int_partition(int,int,int):high => ~high
+LOI_22:30:int_partition(int,int,int):high => ~high
+LOI_23:30:int_partition(int,int,int):pivot => ~pivot
+LOI_24:31:int_partition(int,int,int):high => ~high
+LOI_25:33:int_partition(int,int,int):high => ~high
+LOI_26:33:int_partition(int,int,int):low => ~low
+LOI_27:34:int_partition(int,int,int):high => ~high
+LOI_28:35:int_partition(int,int,int):high => ~high
+LOI_29:35:int_partition(int,int,int):low => ~low
+LOI_30:36:int_partition(int,int,int):low => ~low
+LOI_31:36:int_partition(int,int,int):temp => ~temp
+LOI_32:39:int_partition(int,int,int):high => ~high
+LOI_33:39:int_partition(int,int,int):first => ~first
+LOI_34:39:int_partition(int,int,int):high => ~high
+LOI_35:39:int_partition(int,int,int):pivot => ~pivot
+LOI_36:40:int_partition(int,int,int):high => ~high
+LOI_37:42:int_partition(int,int,int):pivot => ~pivot
+LOI_38:42:int_partition(int,int,int):high => ~high
+LOI_39:43:int_partition(int,int,int):first => ~first
+LOI_40:43:int_partition(int,int,int):high => ~high
+LOI_41:44:int_partition(int,int,int):high => ~high
+LOI_42:44:int_partition(int,int,int):pivot => ~pivot
+LOI_43:45:int_partition(int,int,int):high => ~high
+LOI_44:47:int_partition(int,int,int):first => ~first

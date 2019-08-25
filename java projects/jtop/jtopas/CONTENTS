@@ -1,0 +1,9 @@
+1. versions.alt : contains original and fault seeded versions of jtopas.
+
+2. testdrivers : contains a junit test suite for each version of jtopas.
+
+3. testplans.alt : contains universe files.
+                   A CLASSPATH variable in each universe file should be
+                   modified for your own environment.
+
+4. scripts : contains script files that install jtopas and test suite.

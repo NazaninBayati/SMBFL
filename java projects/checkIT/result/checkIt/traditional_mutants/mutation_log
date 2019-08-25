@@ -1,0 +1,9 @@
+COR_1:10:java.lang.String_checkIt(boolean,boolean,boolean): b || c  =>   b && c
+COR_2:10:java.lang.String_checkIt(boolean,boolean,boolean): b || c  =>   b ^ c
+COR_3:10:java.lang.String_checkIt(boolean,boolean,boolean): a || (b || c)  =>   a && (b || c)
+COR_4:10:java.lang.String_checkIt(boolean,boolean,boolean): a || (b || c)  =>   a ^ (b || c)
+COI_1:10:java.lang.String_checkIt(boolean,boolean,boolean): a  =>  !a
+COI_2:10:java.lang.String_checkIt(boolean,boolean,boolean): b  =>  !b
+COI_3:10:java.lang.String_checkIt(boolean,boolean,boolean): c  =>  !c
+COI_4:10:java.lang.String_checkIt(boolean,boolean,boolean): b || c  =>  !(b || c)
+COI_5:10:java.lang.String_checkIt(boolean,boolean,boolean): a || (b || c)  =>  !(a || (b || c))

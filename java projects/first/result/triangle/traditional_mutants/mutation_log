@@ -1,0 +1,234 @@
+AORB_1:18:int_Type_Area(int,int,int):a + b => a * b
+AORB_2:18:int_Type_Area(int,int,int):a + b => a / b
+AORB_3:18:int_Type_Area(int,int,int):a + b => a % b
+AORB_4:18:int_Type_Area(int,int,int):a + b => a - b
+AORB_5:18:int_Type_Area(int,int,int):a + c => a * c
+AORB_6:18:int_Type_Area(int,int,int):a + c => a / c
+AORB_7:18:int_Type_Area(int,int,int):a + c => a % c
+AORB_8:18:int_Type_Area(int,int,int):a + c => a - c
+AORB_9:18:int_Type_Area(int,int,int):b + c => b * c
+AORB_10:18:int_Type_Area(int,int,int):b + c => b / c
+AORB_11:18:int_Type_Area(int,int,int):b + c => b % c
+AORB_12:18:int_Type_Area(int,int,int):b + c => b - c
+AOIU_1:19:int_Type_Area(int,int,int):INVALID => -INVALID
+AOIU_2:21:int_Type_Area(int,int,int):SCALENE => -SCALENE
+AOIU_3:23:int_Type_Area(int,int,int):ISO => -ISO
+AOIU_4:26:int_Type_Area(int,int,int):EQUAL => -EQUAL
+AOIU_5:29:int_Type_Area(int,int,int):type => -type
+AOIS_1:18:int_Type_Area(int,int,int):a => ++a
+AOIS_2:18:int_Type_Area(int,int,int):a => --a
+AOIS_3:18:int_Type_Area(int,int,int):a => a++
+AOIS_4:18:int_Type_Area(int,int,int):a => a--
+AOIS_5:18:int_Type_Area(int,int,int):b => ++b
+AOIS_6:18:int_Type_Area(int,int,int):b => --b
+AOIS_7:18:int_Type_Area(int,int,int):b => b++
+AOIS_8:18:int_Type_Area(int,int,int):b => b--
+AOIS_9:18:int_Type_Area(int,int,int):c => ++c
+AOIS_10:18:int_Type_Area(int,int,int):c => --c
+AOIS_11:18:int_Type_Area(int,int,int):c => c++
+AOIS_12:18:int_Type_Area(int,int,int):c => c--
+AOIS_13:18:int_Type_Area(int,int,int):a => ++a
+AOIS_14:18:int_Type_Area(int,int,int):a => --a
+AOIS_15:18:int_Type_Area(int,int,int):a => a++
+AOIS_16:18:int_Type_Area(int,int,int):a => a--
+AOIS_17:18:int_Type_Area(int,int,int):b => ++b
+AOIS_18:18:int_Type_Area(int,int,int):b => --b
+AOIS_19:18:int_Type_Area(int,int,int):b => b++
+AOIS_20:18:int_Type_Area(int,int,int):b => b--
+AOIS_21:18:int_Type_Area(int,int,int):c => c++
+AOIS_22:18:int_Type_Area(int,int,int):c => c--
+AOIS_23:18:int_Type_Area(int,int,int):a => ++a
+AOIS_24:18:int_Type_Area(int,int,int):a => --a
+AOIS_25:18:int_Type_Area(int,int,int):a => a++
+AOIS_26:18:int_Type_Area(int,int,int):a => a--
+AOIS_27:18:int_Type_Area(int,int,int):c => ++c
+AOIS_28:18:int_Type_Area(int,int,int):c => --c
+AOIS_29:18:int_Type_Area(int,int,int):c => c++
+AOIS_30:18:int_Type_Area(int,int,int):c => c--
+AOIS_31:18:int_Type_Area(int,int,int):b => b++
+AOIS_32:18:int_Type_Area(int,int,int):b => b--
+AOIS_33:18:int_Type_Area(int,int,int):b => ++b
+AOIS_34:18:int_Type_Area(int,int,int):b => --b
+AOIS_35:18:int_Type_Area(int,int,int):b => b++
+AOIS_36:18:int_Type_Area(int,int,int):b => b--
+AOIS_37:18:int_Type_Area(int,int,int):c => ++c
+AOIS_38:18:int_Type_Area(int,int,int):c => --c
+AOIS_39:18:int_Type_Area(int,int,int):c => c++
+AOIS_40:18:int_Type_Area(int,int,int):c => c--
+AOIS_41:18:int_Type_Area(int,int,int):a => a++
+AOIS_42:18:int_Type_Area(int,int,int):a => a--
+AOIS_43:19:int_Type_Area(int,int,int):INVALID => ++INVALID
+AOIS_44:19:int_Type_Area(int,int,int):INVALID => --INVALID
+AOIS_45:19:int_Type_Area(int,int,int):INVALID => INVALID++
+AOIS_46:19:int_Type_Area(int,int,int):INVALID => INVALID--
+AOIS_47:21:int_Type_Area(int,int,int):SCALENE => ++SCALENE
+AOIS_48:21:int_Type_Area(int,int,int):SCALENE => --SCALENE
+AOIS_49:21:int_Type_Area(int,int,int):SCALENE => SCALENE++
+AOIS_50:21:int_Type_Area(int,int,int):SCALENE => SCALENE--
+AOIS_51:22:int_Type_Area(int,int,int):a => ++a
+AOIS_52:22:int_Type_Area(int,int,int):a => --a
+AOIS_53:22:int_Type_Area(int,int,int):a => a++
+AOIS_54:22:int_Type_Area(int,int,int):a => a--
+AOIS_55:22:int_Type_Area(int,int,int):b => ++b
+AOIS_56:22:int_Type_Area(int,int,int):b => --b
+AOIS_57:22:int_Type_Area(int,int,int):b => b++
+AOIS_58:22:int_Type_Area(int,int,int):b => b--
+AOIS_59:22:int_Type_Area(int,int,int):b => ++b
+AOIS_60:22:int_Type_Area(int,int,int):b => --b
+AOIS_61:22:int_Type_Area(int,int,int):b => b++
+AOIS_62:22:int_Type_Area(int,int,int):b => b--
+AOIS_63:22:int_Type_Area(int,int,int):c => ++c
+AOIS_64:22:int_Type_Area(int,int,int):c => --c
+AOIS_65:22:int_Type_Area(int,int,int):c => c++
+AOIS_66:22:int_Type_Area(int,int,int):c => c--
+AOIS_67:22:int_Type_Area(int,int,int):a => ++a
+AOIS_68:22:int_Type_Area(int,int,int):a => --a
+AOIS_69:22:int_Type_Area(int,int,int):a => a++
+AOIS_70:22:int_Type_Area(int,int,int):a => a--
+AOIS_71:22:int_Type_Area(int,int,int):c => ++c
+AOIS_72:22:int_Type_Area(int,int,int):c => --c
+AOIS_73:22:int_Type_Area(int,int,int):c => c++
+AOIS_74:22:int_Type_Area(int,int,int):c => c--
+AOIS_75:23:int_Type_Area(int,int,int):ISO => ++ISO
+AOIS_76:23:int_Type_Area(int,int,int):ISO => --ISO
+AOIS_77:23:int_Type_Area(int,int,int):ISO => ISO++
+AOIS_78:23:int_Type_Area(int,int,int):ISO => ISO--
+AOIS_79:25:int_Type_Area(int,int,int):a => ++a
+AOIS_80:25:int_Type_Area(int,int,int):a => --a
+AOIS_81:25:int_Type_Area(int,int,int):a => a++
+AOIS_82:25:int_Type_Area(int,int,int):a => a--
+AOIS_83:25:int_Type_Area(int,int,int):b => ++b
+AOIS_84:25:int_Type_Area(int,int,int):b => --b
+AOIS_85:25:int_Type_Area(int,int,int):b => b++
+AOIS_86:25:int_Type_Area(int,int,int):b => b--
+AOIS_87:25:int_Type_Area(int,int,int):b => ++b
+AOIS_88:25:int_Type_Area(int,int,int):b => --b
+AOIS_89:25:int_Type_Area(int,int,int):b => b++
+AOIS_90:25:int_Type_Area(int,int,int):b => b--
+AOIS_91:25:int_Type_Area(int,int,int):c => ++c
+AOIS_92:25:int_Type_Area(int,int,int):c => --c
+AOIS_93:25:int_Type_Area(int,int,int):c => c++
+AOIS_94:25:int_Type_Area(int,int,int):c => c--
+AOIS_95:26:int_Type_Area(int,int,int):EQUAL => ++EQUAL
+AOIS_96:26:int_Type_Area(int,int,int):EQUAL => --EQUAL
+AOIS_97:26:int_Type_Area(int,int,int):EQUAL => EQUAL++
+AOIS_98:26:int_Type_Area(int,int,int):EQUAL => EQUAL--
+AOIS_99:29:int_Type_Area(int,int,int):type => type++
+AOIS_100:29:int_Type_Area(int,int,int):type => type--
+ROR_1:18:int_Type_Area(int,int,int): a <= 0  =>   a > 0
+ROR_2:18:int_Type_Area(int,int,int): a <= 0  =>   a >= 0
+ROR_3:18:int_Type_Area(int,int,int): a <= 0  =>   a < 0
+ROR_4:18:int_Type_Area(int,int,int): a <= 0  =>   a == 0
+ROR_5:18:int_Type_Area(int,int,int): a <= 0  =>   a != 0
+ROR_6:18:int_Type_Area(int,int,int): b <= 0  =>   b > 0
+ROR_7:18:int_Type_Area(int,int,int): b <= 0  =>   b >= 0
+ROR_8:18:int_Type_Area(int,int,int): b <= 0  =>   b < 0
+ROR_9:18:int_Type_Area(int,int,int): b <= 0  =>   b == 0
+ROR_10:18:int_Type_Area(int,int,int): b <= 0  =>   b != 0
+ROR_11:18:int_Type_Area(int,int,int): c <= 0  =>   c > 0
+ROR_12:18:int_Type_Area(int,int,int): c <= 0  =>   c >= 0
+ROR_13:18:int_Type_Area(int,int,int): c <= 0  =>   c < 0
+ROR_14:18:int_Type_Area(int,int,int): c <= 0  =>   c == 0
+ROR_15:18:int_Type_Area(int,int,int): c <= 0  =>   c != 0
+ROR_16:18:int_Type_Area(int,int,int): a + b <= c  =>   a + b > c
+ROR_17:18:int_Type_Area(int,int,int): a + b <= c  =>   a + b >= c
+ROR_18:18:int_Type_Area(int,int,int): a + b <= c  =>   a + b < c
+ROR_19:18:int_Type_Area(int,int,int): a + b <= c  =>   a + b == c
+ROR_20:18:int_Type_Area(int,int,int): a + b <= c  =>   a + b != c
+ROR_21:18:int_Type_Area(int,int,int): a + c <= b  =>   a + c > b
+ROR_22:18:int_Type_Area(int,int,int): a + c <= b  =>   a + c >= b
+ROR_23:18:int_Type_Area(int,int,int): a + c <= b  =>   a + c < b
+ROR_24:18:int_Type_Area(int,int,int): a + c <= b  =>   a + c == b
+ROR_25:18:int_Type_Area(int,int,int): a + c <= b  =>   a + c != b
+ROR_26:18:int_Type_Area(int,int,int): b + c <= a  =>   b + c > a
+ROR_27:18:int_Type_Area(int,int,int): b + c <= a  =>   b + c >= a
+ROR_28:18:int_Type_Area(int,int,int): b + c <= a  =>   b + c < a
+ROR_29:18:int_Type_Area(int,int,int): b + c <= a  =>   b + c == a
+ROR_30:18:int_Type_Area(int,int,int): b + c <= a  =>   b + c != a
+ROR_31:22:int_Type_Area(int,int,int): a == b  =>   a > b
+ROR_32:22:int_Type_Area(int,int,int): a == b  =>   a >= b
+ROR_33:22:int_Type_Area(int,int,int): a == b  =>   a < b
+ROR_34:22:int_Type_Area(int,int,int): a == b  =>   a <= b
+ROR_35:22:int_Type_Area(int,int,int): a == b  =>   a != b
+ROR_36:22:int_Type_Area(int,int,int): b == c  =>   b > c
+ROR_37:22:int_Type_Area(int,int,int): b == c  =>   b >= c
+ROR_38:22:int_Type_Area(int,int,int): b == c  =>   b < c
+ROR_39:22:int_Type_Area(int,int,int): b == c  =>   b <= c
+ROR_40:22:int_Type_Area(int,int,int): b == c  =>   b != c
+ROR_41:22:int_Type_Area(int,int,int): a == c  =>   a > c
+ROR_42:22:int_Type_Area(int,int,int): a == c  =>   a >= c
+ROR_43:22:int_Type_Area(int,int,int): a == c  =>   a < c
+ROR_44:22:int_Type_Area(int,int,int): a == c  =>   a <= c
+ROR_45:22:int_Type_Area(int,int,int): a == c  =>   a != c
+ROR_46:25:int_Type_Area(int,int,int): a == b  =>   a > b
+ROR_47:25:int_Type_Area(int,int,int): a == b  =>   a >= b
+ROR_48:25:int_Type_Area(int,int,int): a == b  =>   a < b
+ROR_49:25:int_Type_Area(int,int,int): a == b  =>   a <= b
+ROR_50:25:int_Type_Area(int,int,int): a == b  =>   a != b
+ROR_51:25:int_Type_Area(int,int,int): b == c  =>   b > c
+ROR_52:25:int_Type_Area(int,int,int): b == c  =>   b >= c
+ROR_53:25:int_Type_Area(int,int,int): b == c  =>   b < c
+ROR_54:25:int_Type_Area(int,int,int): b == c  =>   b <= c
+ROR_55:25:int_Type_Area(int,int,int): b == c  =>   b != c
+COR_1:18:int_Type_Area(int,int,int): a <= 0 || b <= 0  =>   a <= 0 && b <= 0
+COR_2:18:int_Type_Area(int,int,int): a <= 0 || b <= 0  =>   a <= 0 ^ b <= 0
+COR_3:18:int_Type_Area(int,int,int): a <= 0 || b <= 0 || c <= 0  =>   (a <= 0 || b <= 0) && c <= 0
+COR_4:18:int_Type_Area(int,int,int): a <= 0 || b <= 0 || c <= 0  =>   (a <= 0 || b <= 0) ^ c <= 0
+COR_5:18:int_Type_Area(int,int,int): a <= 0 || b <= 0 || c <= 0 || a + b <= c  =>   (a <= 0 || b <= 0 || c <= 0) && a + b <= c
+COR_6:18:int_Type_Area(int,int,int): a <= 0 || b <= 0 || c <= 0 || a + b <= c  =>   (a <= 0 || b <= 0 || c <= 0) ^ a + b <= c
+COR_7:18:int_Type_Area(int,int,int): a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b  =>   (a <= 0 || b <= 0 || c <= 0 || a + b <= c) && a + c <= b
+COR_8:18:int_Type_Area(int,int,int): a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b  =>   (a <= 0 || b <= 0 || c <= 0 || a + b <= c) ^ a + c <= b
+COR_9:18:int_Type_Area(int,int,int): a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b || b + c <= a  =>   (a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b) && b + c <= a
+COR_10:18:int_Type_Area(int,int,int): a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b || b + c <= a  =>   (a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b) ^ b + c <= a
+COR_11:22:int_Type_Area(int,int,int): a == b || b == c  =>   a == b && b == c
+COR_12:22:int_Type_Area(int,int,int): a == b || b == c  =>   a == b ^ b == c
+COR_13:22:int_Type_Area(int,int,int): a == b || b == c || a == c  =>   (a == b || b == c) && a == c
+COR_14:22:int_Type_Area(int,int,int): a == b || b == c || a == c  =>   (a == b || b == c) ^ a == c
+COR_15:25:int_Type_Area(int,int,int): a == b && b == c  =>   a == b || b == c
+COR_16:25:int_Type_Area(int,int,int): a == b && b == c  =>   a == b ^ b == c
+COI_1:18:int_Type_Area(int,int,int): a <= 0  =>  !(a <= 0)
+COI_2:18:int_Type_Area(int,int,int): b <= 0  =>  !(b <= 0)
+COI_3:18:int_Type_Area(int,int,int): a <= 0 || b <= 0  =>  !(a <= 0 || b <= 0)
+COI_4:18:int_Type_Area(int,int,int): c <= 0  =>  !(c <= 0)
+COI_5:18:int_Type_Area(int,int,int): a <= 0 || b <= 0 || c <= 0  =>  !(a <= 0 || b <= 0 || c <= 0)
+COI_6:18:int_Type_Area(int,int,int): a + b <= c  =>  !(a + b <= c)
+COI_7:18:int_Type_Area(int,int,int): a <= 0 || b <= 0 || c <= 0 || a + b <= c  =>  !(a <= 0 || b <= 0 || c <= 0 || a + b <= c)
+COI_8:18:int_Type_Area(int,int,int): a + c <= b  =>  !(a + c <= b)
+COI_9:18:int_Type_Area(int,int,int): a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b  =>  !(a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b)
+COI_10:18:int_Type_Area(int,int,int): b + c <= a  =>  !(b + c <= a)
+COI_11:18:int_Type_Area(int,int,int): a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b || b + c <= a  =>  !(a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b || b + c <= a)
+COI_12:22:int_Type_Area(int,int,int): a == b  =>  !(a == b)
+COI_13:22:int_Type_Area(int,int,int): b == c  =>  !(b == c)
+COI_14:22:int_Type_Area(int,int,int): a == b || b == c  =>  !(a == b || b == c)
+COI_15:22:int_Type_Area(int,int,int): a == c  =>  !(a == c)
+COI_16:22:int_Type_Area(int,int,int): a == b || b == c || a == c  =>  !(a == b || b == c || a == c)
+COI_17:25:int_Type_Area(int,int,int): a == b  =>  !(a == b)
+COI_18:25:int_Type_Area(int,int,int): b == c  =>  !(b == c)
+COI_19:25:int_Type_Area(int,int,int): a == b && b == c  =>  !(a == b && b == c)
+LOI_1:18:int_Type_Area(int,int,int):a => ~a
+LOI_2:18:int_Type_Area(int,int,int):b => ~b
+LOI_3:18:int_Type_Area(int,int,int):c => ~c
+LOI_4:18:int_Type_Area(int,int,int):a => ~a
+LOI_5:18:int_Type_Area(int,int,int):b => ~b
+LOI_6:18:int_Type_Area(int,int,int):c => ~c
+LOI_7:18:int_Type_Area(int,int,int):a => ~a
+LOI_8:18:int_Type_Area(int,int,int):c => ~c
+LOI_9:18:int_Type_Area(int,int,int):b => ~b
+LOI_10:18:int_Type_Area(int,int,int):b => ~b
+LOI_11:18:int_Type_Area(int,int,int):c => ~c
+LOI_12:18:int_Type_Area(int,int,int):a => ~a
+LOI_13:19:int_Type_Area(int,int,int):INVALID => ~INVALID
+LOI_14:21:int_Type_Area(int,int,int):SCALENE => ~SCALENE
+LOI_15:22:int_Type_Area(int,int,int):a => ~a
+LOI_16:22:int_Type_Area(int,int,int):b => ~b
+LOI_17:22:int_Type_Area(int,int,int):b => ~b
+LOI_18:22:int_Type_Area(int,int,int):c => ~c
+LOI_19:22:int_Type_Area(int,int,int):a => ~a
+LOI_20:22:int_Type_Area(int,int,int):c => ~c
+LOI_21:23:int_Type_Area(int,int,int):ISO => ~ISO
+LOI_22:25:int_Type_Area(int,int,int):a => ~a
+LOI_23:25:int_Type_Area(int,int,int):b => ~b
+LOI_24:25:int_Type_Area(int,int,int):b => ~b
+LOI_25:25:int_Type_Area(int,int,int):c => ~c
+LOI_26:26:int_Type_Area(int,int,int):EQUAL => ~EQUAL
+LOI_27:29:int_Type_Area(int,int,int):type => ~type

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="MuClipse.TestsLaunchConfigType">
+<stringAttribute key="CLASS_CHOICE" value="CheckPalindorme"/>
+<stringAttribute key="CLASS_PATH" value="bin"/>
+<stringAttribute key="MUTANT_HOME" value="result"/>
+<stringAttribute key="SRC_PATH" value="src"/>
+<intAttribute key="TESTING_LEVEL" value="2"/>
+<stringAttribute key="TESTSET_PATH" value="src"/>
+<intAttribute key="TIMEOUT" value="4500"/>
+<stringAttribute key="WHICH_TEST" value="CheckPalindormeTest"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="CheckP"/>
+</launchConfiguration>

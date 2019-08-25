@@ -1,0 +1,257 @@
+AORB_1:20:int_FnMinus(int,int):a * FnNegate( b ) => a / FnNegate( b )
+AORB_2:20:int_FnMinus(int,int):a * FnNegate( b ) => a % FnNegate( b )
+AORB_3:20:int_FnMinus(int,int):a * FnNegate( b ) => a + FnNegate( b )
+AORB_4:20:int_FnMinus(int,int):a * FnNegate( b ) => a - FnNegate( b )
+AORS_1:43:int_FnTimes(int,int):--iter => iter++
+AORS_2:71:int_FnDivide(int,int):++quotient => quotient--
+AODU_1:10:int_FnNegate(int):-1 => 1
+AODS_1:71:int_FnDivide(int,int):++quotient => quotient
+AOIU_1:12:int_FnNegate(int):d => -d
+AOIU_2:13:int_FnNegate(int):d => -d
+AOIU_3:15:int_FnNegate(int):neg => -neg
+AOIU_4:20:int_FnMinus(int,int):a => -a
+AOIU_5:20:int_FnMinus(int,int):b => -b
+AOIU_6:31:int_abs(int):a => -a
+AOIU_7:33:int_abs(int):a => -a
+AOIU_8:40:int_FnTimes(int,int):b => -b
+AOIU_9:40:int_FnTimes(int,int):a => -a
+AOIU_10:44:int_FnTimes(int,int):a => -a
+AOIU_11:47:int_FnTimes(int,int):sum => -sum
+AOIU_12:49:int_FnTimes(int,int):sum => -sum
+AOIU_13:68:int_FnDivide(int,int):b => -b
+AOIU_14:70:int_FnDivide(int,int):a => -a
+AOIU_15:70:int_FnDivide(int,int):divisor => -divisor
+AOIU_16:73:int_FnDivide(int,int):a => -a
+AOIU_17:73:int_FnDivide(int,int):b => -b
+AOIU_18:74:int_FnDivide(int,int):quotient => -quotient
+AOIU_19:76:int_FnDivide(int,int):quotient => -quotient
+AOIS_1:10:int_FnNegate(int):a => ++a
+AOIS_2:10:int_FnNegate(int):a => --a
+AOIS_3:10:int_FnNegate(int):a => a++
+AOIS_4:10:int_FnNegate(int):a => a--
+AOIS_5:11:int_FnNegate(int):a => ++a
+AOIS_6:11:int_FnNegate(int):a => --a
+AOIS_7:11:int_FnNegate(int):a => a++
+AOIS_8:11:int_FnNegate(int):a => a--
+AOIS_9:12:int_FnNegate(int):d => ++d
+AOIS_10:12:int_FnNegate(int):d => --d
+AOIS_11:12:int_FnNegate(int):d => d++
+AOIS_12:12:int_FnNegate(int):d => d--
+AOIS_13:13:int_FnNegate(int):d => ++d
+AOIS_14:13:int_FnNegate(int):d => --d
+AOIS_15:13:int_FnNegate(int):d => d++
+AOIS_16:13:int_FnNegate(int):d => d--
+AOIS_17:15:int_FnNegate(int):neg => neg++
+AOIS_18:15:int_FnNegate(int):neg => neg--
+AOIS_19:20:int_FnMinus(int,int):a => ++a
+AOIS_20:20:int_FnMinus(int,int):a => --a
+AOIS_21:20:int_FnMinus(int,int):a => a++
+AOIS_22:20:int_FnMinus(int,int):a => a--
+AOIS_23:20:int_FnMinus(int,int):b => ++b
+AOIS_24:20:int_FnMinus(int,int):b => --b
+AOIS_25:20:int_FnMinus(int,int):b => b++
+AOIS_26:20:int_FnMinus(int,int):b => b--
+AOIS_27:25:boolean_DifferentSigns(int,int):a => ++a
+AOIS_28:25:boolean_DifferentSigns(int,int):a => --a
+AOIS_29:25:boolean_DifferentSigns(int,int):a => a++
+AOIS_30:25:boolean_DifferentSigns(int,int):a => a--
+AOIS_31:25:boolean_DifferentSigns(int,int):b => ++b
+AOIS_32:25:boolean_DifferentSigns(int,int):b => --b
+AOIS_33:25:boolean_DifferentSigns(int,int):b => b++
+AOIS_34:25:boolean_DifferentSigns(int,int):b => b--
+AOIS_35:25:boolean_DifferentSigns(int,int):a => ++a
+AOIS_36:25:boolean_DifferentSigns(int,int):a => --a
+AOIS_37:25:boolean_DifferentSigns(int,int):a => a++
+AOIS_38:25:boolean_DifferentSigns(int,int):a => a--
+AOIS_39:25:boolean_DifferentSigns(int,int):b => ++b
+AOIS_40:25:boolean_DifferentSigns(int,int):b => --b
+AOIS_41:25:boolean_DifferentSigns(int,int):b => b++
+AOIS_42:25:boolean_DifferentSigns(int,int):b => b--
+AOIS_43:30:int_abs(int):a => ++a
+AOIS_44:30:int_abs(int):a => --a
+AOIS_45:30:int_abs(int):a => a++
+AOIS_46:30:int_abs(int):a => a--
+AOIS_47:31:int_abs(int):a => a++
+AOIS_48:31:int_abs(int):a => a--
+AOIS_49:33:int_abs(int):a => a++
+AOIS_50:33:int_abs(int):a => a--
+AOIS_51:39:int_FnTimes(int,int):a => ++a
+AOIS_52:39:int_FnTimes(int,int):a => --a
+AOIS_53:39:int_FnTimes(int,int):a => a++
+AOIS_54:39:int_FnTimes(int,int):a => a--
+AOIS_55:39:int_FnTimes(int,int):b => ++b
+AOIS_56:39:int_FnTimes(int,int):b => --b
+AOIS_57:39:int_FnTimes(int,int):b => b++
+AOIS_58:39:int_FnTimes(int,int):b => b--
+AOIS_59:40:int_FnTimes(int,int):b => b++
+AOIS_60:40:int_FnTimes(int,int):b => b--
+AOIS_61:40:int_FnTimes(int,int):a => a++
+AOIS_62:40:int_FnTimes(int,int):a => a--
+AOIS_63:43:int_FnTimes(int,int):iter => ++iter
+AOIS_64:43:int_FnTimes(int,int):iter => --iter
+AOIS_65:43:int_FnTimes(int,int):iter => iter++
+AOIS_66:43:int_FnTimes(int,int):iter => iter--
+AOIS_67:44:int_FnTimes(int,int):a => ++a
+AOIS_68:44:int_FnTimes(int,int):a => --a
+AOIS_69:44:int_FnTimes(int,int):a => a++
+AOIS_70:44:int_FnTimes(int,int):a => a--
+AOIS_71:46:int_FnTimes(int,int):b => ++b
+AOIS_72:46:int_FnTimes(int,int):b => --b
+AOIS_73:46:int_FnTimes(int,int):b => b++
+AOIS_74:46:int_FnTimes(int,int):b => b--
+AOIS_75:47:int_FnTimes(int,int):sum => ++sum
+AOIS_76:47:int_FnTimes(int,int):sum => --sum
+AOIS_77:47:int_FnTimes(int,int):sum => sum++
+AOIS_78:47:int_FnTimes(int,int):sum => sum--
+AOIS_79:49:int_FnTimes(int,int):sum => sum++
+AOIS_80:49:int_FnTimes(int,int):sum => sum--
+AOIS_81:54:int_DefineAndRoundFraction(int,int):a => ++a
+AOIS_82:54:int_DefineAndRoundFraction(int,int):a => --a
+AOIS_83:54:int_DefineAndRoundFraction(int,int):a => a++
+AOIS_84:54:int_DefineAndRoundFraction(int,int):a => a--
+AOIS_85:54:int_DefineAndRoundFraction(int,int):b => ++b
+AOIS_86:54:int_DefineAndRoundFraction(int,int):b => --b
+AOIS_87:54:int_DefineAndRoundFraction(int,int):b => b++
+AOIS_88:54:int_DefineAndRoundFraction(int,int):b => b--
+AOIS_89:64:int_FnDivide(int,int):b => ++b
+AOIS_90:64:int_FnDivide(int,int):b => --b
+AOIS_91:64:int_FnDivide(int,int):b => b++
+AOIS_92:64:int_FnDivide(int,int):b => b--
+AOIS_93:68:int_FnDivide(int,int):b => b++
+AOIS_94:68:int_FnDivide(int,int):b => b--
+AOIS_95:70:int_FnDivide(int,int):a => ++a
+AOIS_96:70:int_FnDivide(int,int):a => --a
+AOIS_97:70:int_FnDivide(int,int):a => a++
+AOIS_98:70:int_FnDivide(int,int):a => a--
+AOIS_99:70:int_FnDivide(int,int):divend => ++divend
+AOIS_100:70:int_FnDivide(int,int):divend => --divend
+AOIS_101:70:int_FnDivide(int,int):divend => divend++
+AOIS_102:70:int_FnDivide(int,int):divend => divend--
+AOIS_103:70:int_FnDivide(int,int):divisor => ++divisor
+AOIS_104:70:int_FnDivide(int,int):divisor => --divisor
+AOIS_105:70:int_FnDivide(int,int):divisor => divisor++
+AOIS_106:70:int_FnDivide(int,int):divisor => divisor--
+AOIS_107:70:int_FnDivide(int,int):divisor => ++divisor
+AOIS_108:70:int_FnDivide(int,int):divisor => --divisor
+AOIS_109:70:int_FnDivide(int,int):divisor => divisor++
+AOIS_110:70:int_FnDivide(int,int):divisor => divisor--
+AOIS_111:73:int_FnDivide(int,int):a => a++
+AOIS_112:73:int_FnDivide(int,int):a => a--
+AOIS_113:73:int_FnDivide(int,int):b => b++
+AOIS_114:73:int_FnDivide(int,int):b => b--
+AOIS_115:74:int_FnDivide(int,int):quotient => ++quotient
+AOIS_116:74:int_FnDivide(int,int):quotient => --quotient
+AOIS_117:74:int_FnDivide(int,int):quotient => quotient++
+AOIS_118:74:int_FnDivide(int,int):quotient => quotient--
+AOIS_119:76:int_FnDivide(int,int):quotient => quotient++
+AOIS_120:76:int_FnDivide(int,int):quotient => quotient--
+ROR_1:11:int_FnNegate(int): a != 0  =>   a > 0
+ROR_2:11:int_FnNegate(int): a != 0  =>   a >= 0
+ROR_3:11:int_FnNegate(int): a != 0  =>   a < 0
+ROR_4:11:int_FnNegate(int): a != 0  =>   a <= 0
+ROR_5:11:int_FnNegate(int): a != 0  =>   a == 0
+ROR_6:25:boolean_DifferentSigns(int,int): b > 0  =>   b >= 0
+ROR_7:25:boolean_DifferentSigns(int,int): b > 0  =>   b < 0
+ROR_8:25:boolean_DifferentSigns(int,int): b > 0  =>   b <= 0
+ROR_9:25:boolean_DifferentSigns(int,int): b > 0  =>   b == 0
+ROR_10:25:boolean_DifferentSigns(int,int): b > 0  =>   b != 0
+ROR_11:25:boolean_DifferentSigns(int,int): a > 0  =>   a >= 0
+ROR_12:25:boolean_DifferentSigns(int,int): a > 0  =>   a < 0
+ROR_13:25:boolean_DifferentSigns(int,int): a > 0  =>   a <= 0
+ROR_14:25:boolean_DifferentSigns(int,int): a > 0  =>   a == 0
+ROR_15:25:boolean_DifferentSigns(int,int): a > 0  =>   a != 0
+ROR_16:43:int_FnTimes(int,int): iter > 0  =>   iter >= 0
+ROR_17:43:int_FnTimes(int,int): iter > 0  =>   iter < 0
+ROR_18:43:int_FnTimes(int,int): iter > 0  =>   iter <= 0
+ROR_19:43:int_FnTimes(int,int): iter > 0  =>   iter == 0
+ROR_20:43:int_FnTimes(int,int): iter > 0  =>   iter != 0
+ROR_21:54:int_DefineAndRoundFraction(int,int): FnTimes( abs( a ), 2 ) >= abs( b )  =>   FnTimes( abs( a ), 2 ) > abs( b )
+ROR_22:54:int_DefineAndRoundFraction(int,int): FnTimes( abs( a ), 2 ) >= abs( b )  =>   FnTimes( abs( a ), 2 ) < abs( b )
+ROR_23:54:int_DefineAndRoundFraction(int,int): FnTimes( abs( a ), 2 ) >= abs( b )  =>   FnTimes( abs( a ), 2 ) <= abs( b )
+ROR_24:54:int_DefineAndRoundFraction(int,int): FnTimes( abs( a ), 2 ) >= abs( b )  =>   FnTimes( abs( a ), 2 ) == abs( b )
+ROR_25:54:int_DefineAndRoundFraction(int,int): FnTimes( abs( a ), 2 ) >= abs( b )  =>   FnTimes( abs( a ), 2 ) != abs( b )
+ROR_26:64:int_FnDivide(int,int): b == 0  =>   b > 0
+ROR_27:64:int_FnDivide(int,int): b == 0  =>   b >= 0
+ROR_28:64:int_FnDivide(int,int): b == 0  =>   b < 0
+ROR_29:64:int_FnDivide(int,int): b == 0  =>   b <= 0
+ROR_30:64:int_FnDivide(int,int): b == 0  =>   b != 0
+ROR_31:70:int_FnDivide(int,int): divend >= abs( divisor )  =>   divend > abs( divisor )
+ROR_32:70:int_FnDivide(int,int): divend >= abs( divisor )  =>   divend < abs( divisor )
+ROR_33:70:int_FnDivide(int,int): divend >= abs( divisor )  =>   divend <= abs( divisor )
+ROR_34:70:int_FnDivide(int,int): divend >= abs( divisor )  =>   divend == abs( divisor )
+ROR_35:70:int_FnDivide(int,int): divend >= abs( divisor )  =>   divend != abs( divisor )
+COR_1:25:boolean_DifferentSigns(int,int): a < 0 && b > 0  =>   a < 0 || b > 0
+COR_2:25:boolean_DifferentSigns(int,int): a < 0 && b > 0  =>   a < 0 ^ b > 0
+COR_3:25:boolean_DifferentSigns(int,int): a > 0 && b < 0  =>   a > 0 || b < 0
+COR_4:25:boolean_DifferentSigns(int,int): a > 0 && b < 0  =>   a > 0 ^ b < 0
+COR_5:25:boolean_DifferentSigns(int,int): a < 0 && b > 0 || a > 0 && b < 0  =>   a < 0 && b > 0 && (a > 0 && b < 0)
+COR_6:25:boolean_DifferentSigns(int,int): a < 0 && b > 0 || a > 0 && b < 0  =>   (a < 0 && b > 0) ^ (a > 0 && b < 0)
+COI_1:10:int_FnNegate(int): a < 0  =>  !(a < 0)
+COI_2:11:int_FnNegate(int): a != 0  =>  !(a != 0)
+COI_3:25:boolean_DifferentSigns(int,int): a < 0  =>  !(a < 0)
+COI_4:25:boolean_DifferentSigns(int,int): b > 0  =>  !(b > 0)
+COI_5:25:boolean_DifferentSigns(int,int): a < 0 && b > 0  =>  !(a < 0 && b > 0)
+COI_6:25:boolean_DifferentSigns(int,int): a > 0  =>  !(a > 0)
+COI_7:25:boolean_DifferentSigns(int,int): b < 0  =>  !(b < 0)
+COI_8:25:boolean_DifferentSigns(int,int): a > 0 && b < 0  =>  !(a > 0 && b < 0)
+COI_9:25:boolean_DifferentSigns(int,int): a < 0 && b > 0 || a > 0 && b < 0  =>  !(a < 0 && b > 0 || a > 0 && b < 0)
+COI_10:30:int_abs(int): a < 0  =>  !(a < 0)
+COI_11:39:int_FnTimes(int,int): a < b  =>  !(a < b)
+COI_12:43:int_FnTimes(int,int): iter > 0  =>  !(iter > 0)
+COI_13:46:int_FnTimes(int,int): b < 0  =>  !(b < 0)
+COI_14:54:int_DefineAndRoundFraction(int,int): FnTimes( abs( a ), 2 ) >= abs( b )  =>  !(FnTimes( abs( a ), 2 ) >= abs( b ))
+COI_15:64:int_FnDivide(int,int): b == 0  =>  !(b == 0)
+COI_16:70:int_FnDivide(int,int): divend >= abs( divisor )  =>  !(divend >= abs( divisor ))
+LOI_1:10:int_FnNegate(int):a => ~a
+LOI_2:11:int_FnNegate(int):a => ~a
+LOI_3:12:int_FnNegate(int):d => ~d
+LOI_4:13:int_FnNegate(int):d => ~d
+LOI_5:15:int_FnNegate(int):neg => ~neg
+LOI_6:20:int_FnMinus(int,int):a => ~a
+LOI_7:20:int_FnMinus(int,int):b => ~b
+LOI_8:25:boolean_DifferentSigns(int,int):a => ~a
+LOI_9:25:boolean_DifferentSigns(int,int):b => ~b
+LOI_10:25:boolean_DifferentSigns(int,int):a => ~a
+LOI_11:25:boolean_DifferentSigns(int,int):b => ~b
+LOI_12:30:int_abs(int):a => ~a
+LOI_13:31:int_abs(int):a => ~a
+LOI_14:33:int_abs(int):a => ~a
+LOI_15:39:int_FnTimes(int,int):a => ~a
+LOI_16:39:int_FnTimes(int,int):b => ~b
+LOI_17:40:int_FnTimes(int,int):b => ~b
+LOI_18:40:int_FnTimes(int,int):a => ~a
+LOI_19:43:int_FnTimes(int,int):iter => ~iter
+LOI_20:43:int_FnTimes(int,int):iter => ~iter
+LOI_21:44:int_FnTimes(int,int):a => ~a
+LOI_22:46:int_FnTimes(int,int):b => ~b
+LOI_23:47:int_FnTimes(int,int):sum => ~sum
+LOI_24:49:int_FnTimes(int,int):sum => ~sum
+LOI_25:54:int_DefineAndRoundFraction(int,int):a => ~a
+LOI_26:54:int_DefineAndRoundFraction(int,int):b => ~b
+LOI_27:64:int_FnDivide(int,int):b => ~b
+LOI_28:68:int_FnDivide(int,int):b => ~b
+LOI_29:70:int_FnDivide(int,int):a => ~a
+LOI_30:70:int_FnDivide(int,int):divend => ~divend
+LOI_31:70:int_FnDivide(int,int):divisor => ~divisor
+LOI_32:70:int_FnDivide(int,int):divisor => ~divisor
+LOI_33:71:int_FnDivide(int,int):quotient => ~quotient
+LOI_34:73:int_FnDivide(int,int):a => ~a
+LOI_35:73:int_FnDivide(int,int):b => ~b
+LOI_36:74:int_FnDivide(int,int):quotient => ~quotient
+LOI_37:76:int_FnDivide(int,int):quotient => ~quotient
+ASRS_1:12:int_FnNegate(int):neg += d => neg /= d
+ASRS_2:12:int_FnNegate(int):neg += d => neg *= d
+ASRS_3:12:int_FnNegate(int):neg += d => neg -= d
+ASRS_4:12:int_FnNegate(int):neg += d => neg %= d
+ASRS_5:13:int_FnNegate(int):a += d => a /= d
+ASRS_6:13:int_FnNegate(int):a += d => a *= d
+ASRS_7:13:int_FnNegate(int):a += d => a -= d
+ASRS_8:13:int_FnNegate(int):a += d => a %= d
+ASRS_9:44:int_FnTimes(int,int):sum += a => sum /= a
+ASRS_10:44:int_FnTimes(int,int):sum += a => sum *= a
+ASRS_11:44:int_FnTimes(int,int):sum += a => sum -= a
+ASRS_12:44:int_FnTimes(int,int):sum += a => sum %= a
+ASRS_13:70:int_FnDivide(int,int):divend += divisor => divend /= divisor
+ASRS_14:70:int_FnDivide(int,int):divend += divisor => divend *= divisor
+ASRS_15:70:int_FnDivide(int,int):divend += divisor => divend -= divisor
+ASRS_16:70:int_FnDivide(int,int):divend += divisor => divend %= divisor

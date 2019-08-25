@@ -1,0 +1,37 @@
+Changes in the JTopas Project:
+------------------------------
+
+Version 0.3:
+------------
+- the collection classes and interfaces of JDK 1.2 are used instead of the 
+  Vector and Hashtable classes of JDK 1.x. The Tokenizer interface changed
+  therefore: instead of Enumeration the nicer Interface Iterator is used
+- The InputStreamTokenizer works with java.io.Reader instances rather than with
+  java.io.InputStreamReader ones only
+- it is now possible to change from one java.io.Reader to another. E.g. a list 
+  of files can be processed with one InputStreamTokenizer instance
+- a bug in completing line comments before EOF or run-out-of-data situations has
+  been fixed
+- the de.susebox.jtopas package with the PluginTokenizer is introduced. It 
+  allows user-supplied handler methods for more efficient parsing of special
+  sequences, whitespaces and more
+- more performant whitespace handling has been implemented in AbstractTokenizer.
+- a skip method is added to AbstractTokenizer
+- a public readMore method is added to AbstractTokenizer to enable an explicite
+  call for more data.
+- the secure method getChar has got an equivalent getCharUnchecked that skips
+  the bounds checking but is faster than getChar.
+
+Version 0.2:
+------------
+- a bug in the embedded-tokenizers feature was fixed. It
+  occured, when the input buffer had to be reallocated.
+- the HTML and CSS sources of the JTopas website on sourceforge.net
+  was included in the release
+- CVS and helper files are excluded from jtopas archive
+
+Version 0.1:
+------------
+This is the initial version
+
+

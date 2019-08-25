@@ -1,0 +1,104 @@
+AORB_1:30:java.lang.String_lrs(java.lang.String):N - 1 => N * 1
+AORB_2:30:java.lang.String_lrs(java.lang.String):N - 1 => N / 1
+AORB_3:30:java.lang.String_lrs(java.lang.String):N - 1 => N % 1
+AORB_4:30:java.lang.String_lrs(java.lang.String):N - 1 => N + 1
+AORB_5:31:java.lang.String_lrs(java.lang.String):i + 1 => i * 1
+AORB_6:31:java.lang.String_lrs(java.lang.String):i + 1 => i / 1
+AORB_7:31:java.lang.String_lrs(java.lang.String):i + 1 => i % 1
+AORB_8:31:java.lang.String_lrs(java.lang.String):i + 1 => i - 1
+AORS_1:13:java.lang.String_lcp(java.lang.String,java.lang.String):i++ => i--
+AORS_2:25:java.lang.String_lrs(java.lang.String):i++ => i--
+AORS_3:30:java.lang.String_lrs(java.lang.String):i++ => i--
+AOIU_1:15:java.lang.String_lcp(java.lang.String,java.lang.String):i => -i
+AOIU_2:18:java.lang.String_lcp(java.lang.String,java.lang.String):n => -n
+AOIU_3:24:java.lang.String_lrs(java.lang.String):N => -N
+AOIU_4:26:java.lang.String_lrs(java.lang.String):i => -i
+AOIU_5:26:java.lang.String_lrs(java.lang.String):N => -N
+AOIU_6:31:java.lang.String_lrs(java.lang.String):i => -i
+AOIU_7:31:java.lang.String_lrs(java.lang.String):i => -i
+AOIS_1:13:java.lang.String_lcp(java.lang.String,java.lang.String):i => ++i
+AOIS_2:13:java.lang.String_lcp(java.lang.String,java.lang.String):i => --i
+AOIS_3:13:java.lang.String_lcp(java.lang.String,java.lang.String):i => i++
+AOIS_4:13:java.lang.String_lcp(java.lang.String,java.lang.String):i => i--
+AOIS_5:13:java.lang.String_lcp(java.lang.String,java.lang.String):n => ++n
+AOIS_6:13:java.lang.String_lcp(java.lang.String,java.lang.String):n => --n
+AOIS_7:13:java.lang.String_lcp(java.lang.String,java.lang.String):n => n++
+AOIS_8:13:java.lang.String_lcp(java.lang.String,java.lang.String):n => n--
+AOIS_9:14:java.lang.String_lcp(java.lang.String,java.lang.String):i => ++i
+AOIS_10:14:java.lang.String_lcp(java.lang.String,java.lang.String):i => --i
+AOIS_11:14:java.lang.String_lcp(java.lang.String,java.lang.String):i => i++
+AOIS_12:14:java.lang.String_lcp(java.lang.String,java.lang.String):i => i--
+AOIS_13:14:java.lang.String_lcp(java.lang.String,java.lang.String):i => ++i
+AOIS_14:14:java.lang.String_lcp(java.lang.String,java.lang.String):i => --i
+AOIS_15:14:java.lang.String_lcp(java.lang.String,java.lang.String):i => i++
+AOIS_16:14:java.lang.String_lcp(java.lang.String,java.lang.String):i => i--
+AOIS_17:15:java.lang.String_lcp(java.lang.String,java.lang.String):i => i++
+AOIS_18:15:java.lang.String_lcp(java.lang.String,java.lang.String):i => i--
+AOIS_19:18:java.lang.String_lcp(java.lang.String,java.lang.String):n => n++
+AOIS_20:18:java.lang.String_lcp(java.lang.String,java.lang.String):n => n--
+AOIS_21:24:java.lang.String_lrs(java.lang.String):N => N++
+AOIS_22:24:java.lang.String_lrs(java.lang.String):N => N--
+AOIS_23:25:java.lang.String_lrs(java.lang.String):i => ++i
+AOIS_24:25:java.lang.String_lrs(java.lang.String):i => --i
+AOIS_25:25:java.lang.String_lrs(java.lang.String):i => i++
+AOIS_26:25:java.lang.String_lrs(java.lang.String):i => i--
+AOIS_27:25:java.lang.String_lrs(java.lang.String):N => ++N
+AOIS_28:25:java.lang.String_lrs(java.lang.String):N => --N
+AOIS_29:25:java.lang.String_lrs(java.lang.String):N => N++
+AOIS_30:25:java.lang.String_lrs(java.lang.String):N => N--
+AOIS_31:26:java.lang.String_lrs(java.lang.String):i => ++i
+AOIS_32:26:java.lang.String_lrs(java.lang.String):i => --i
+AOIS_33:26:java.lang.String_lrs(java.lang.String):i => i++
+AOIS_34:26:java.lang.String_lrs(java.lang.String):i => i--
+AOIS_35:26:java.lang.String_lrs(java.lang.String):N => ++N
+AOIS_36:26:java.lang.String_lrs(java.lang.String):N => --N
+AOIS_37:26:java.lang.String_lrs(java.lang.String):N => N++
+AOIS_38:26:java.lang.String_lrs(java.lang.String):N => N--
+AOIS_39:30:java.lang.String_lrs(java.lang.String):i => ++i
+AOIS_40:30:java.lang.String_lrs(java.lang.String):i => --i
+AOIS_41:30:java.lang.String_lrs(java.lang.String):i => i++
+AOIS_42:30:java.lang.String_lrs(java.lang.String):i => i--
+AOIS_43:30:java.lang.String_lrs(java.lang.String):N => ++N
+AOIS_44:30:java.lang.String_lrs(java.lang.String):N => --N
+AOIS_45:30:java.lang.String_lrs(java.lang.String):N => N++
+AOIS_46:30:java.lang.String_lrs(java.lang.String):N => N--
+AOIS_47:31:java.lang.String_lrs(java.lang.String):i => i++
+AOIS_48:31:java.lang.String_lrs(java.lang.String):i => i--
+AOIS_49:31:java.lang.String_lrs(java.lang.String):i => ++i
+AOIS_50:31:java.lang.String_lrs(java.lang.String):i => --i
+AOIS_51:31:java.lang.String_lrs(java.lang.String):i => i++
+AOIS_52:31:java.lang.String_lrs(java.lang.String):i => i--
+ROR_1:14:java.lang.String_lcp(java.lang.String,java.lang.String): s.charAt( i ) == t.charAt( i )  =>   s.charAt( i ) > t.charAt( i )
+ROR_2:14:java.lang.String_lcp(java.lang.String,java.lang.String): s.charAt( i ) == t.charAt( i )  =>   s.charAt( i ) >= t.charAt( i )
+ROR_3:14:java.lang.String_lcp(java.lang.String,java.lang.String): s.charAt( i ) == t.charAt( i )  =>   s.charAt( i ) < t.charAt( i )
+ROR_4:14:java.lang.String_lcp(java.lang.String,java.lang.String): s.charAt( i ) == t.charAt( i )  =>   s.charAt( i ) <= t.charAt( i )
+ROR_5:14:java.lang.String_lcp(java.lang.String,java.lang.String): s.charAt( i ) == t.charAt( i )  =>   s.charAt( i ) != t.charAt( i )
+ROR_6:32:java.lang.String_lrs(java.lang.String): x.length() > lrs.length()  =>   x.length() >= lrs.length()
+ROR_7:32:java.lang.String_lrs(java.lang.String): x.length() > lrs.length()  =>   x.length() < lrs.length()
+ROR_8:32:java.lang.String_lrs(java.lang.String): x.length() > lrs.length()  =>   x.length() <= lrs.length()
+ROR_9:32:java.lang.String_lrs(java.lang.String): x.length() > lrs.length()  =>   x.length() == lrs.length()
+ROR_10:32:java.lang.String_lrs(java.lang.String): x.length() > lrs.length()  =>   x.length() != lrs.length()
+COI_1:13:java.lang.String_lcp(java.lang.String,java.lang.String): i < n  =>  !(i < n)
+COI_2:14:java.lang.String_lcp(java.lang.String,java.lang.String): s.charAt( i ) == t.charAt( i )  =>  !(s.charAt( i ) == t.charAt( i ))
+COI_3:25:java.lang.String_lrs(java.lang.String): i < N  =>  !(i < N)
+COI_4:30:java.lang.String_lrs(java.lang.String): i < N - 1  =>  !(i < N - 1)
+COI_5:32:java.lang.String_lrs(java.lang.String): x.length() > lrs.length()  =>  !(x.length() > lrs.length())
+LOI_1:13:java.lang.String_lcp(java.lang.String,java.lang.String):i => ~i
+LOI_2:13:java.lang.String_lcp(java.lang.String,java.lang.String):n => ~n
+LOI_3:13:java.lang.String_lcp(java.lang.String,java.lang.String):i => ~i
+LOI_4:14:java.lang.String_lcp(java.lang.String,java.lang.String):i => ~i
+LOI_5:14:java.lang.String_lcp(java.lang.String,java.lang.String):i => ~i
+LOI_6:15:java.lang.String_lcp(java.lang.String,java.lang.String):i => ~i
+LOI_7:18:java.lang.String_lcp(java.lang.String,java.lang.String):n => ~n
+LOI_8:24:java.lang.String_lrs(java.lang.String):N => ~N
+LOI_9:25:java.lang.String_lrs(java.lang.String):i => ~i
+LOI_10:25:java.lang.String_lrs(java.lang.String):N => ~N
+LOI_11:25:java.lang.String_lrs(java.lang.String):i => ~i
+LOI_12:26:java.lang.String_lrs(java.lang.String):i => ~i
+LOI_13:26:java.lang.String_lrs(java.lang.String):i => ~i
+LOI_14:26:java.lang.String_lrs(java.lang.String):N => ~N
+LOI_15:30:java.lang.String_lrs(java.lang.String):i => ~i
+LOI_16:30:java.lang.String_lrs(java.lang.String):N => ~N
+LOI_17:30:java.lang.String_lrs(java.lang.String):i => ~i
+LOI_18:31:java.lang.String_lrs(java.lang.String):i => ~i
+LOI_19:31:java.lang.String_lrs(java.lang.String):i => ~i

@@ -1,0 +1,8 @@
+void_sort(java.lang.Comparable)
+void_sink(java.lang.Comparable,int,int)
+boolean_less(java.lang.Comparable,int,int)
+void_exch(java.lang.Object,int,int)
+boolean_less(java.lang.Comparable,java.lang.Comparable)
+boolean_isSorted(java.lang.Comparable)
+void_show(java.lang.Comparable)
+void_main(java.lang.String)

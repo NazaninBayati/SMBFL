@@ -1,0 +1,7 @@
+double_phi(double)
+double_phi(double,double,double)
+double_Phi2(double)
+double_Phi2(double,double,double)
+double_PhiInverse(double)
+double_PhiInverse(double,double,double,double)
+void_main(java.lang.String)

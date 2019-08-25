@@ -1,0 +1,58 @@
+AORB_1:20:int_FnMinus(int,int):a * FnNegate( b ) => a / FnNegate( b )
+AORB_2:20:int_FnMinus(int,int):a * FnNegate( b ) => a % FnNegate( b )
+AORB_3:20:int_FnMinus(int,int):a * FnNegate( b ) => a + FnNegate( b )
+AORB_4:20:int_FnMinus(int,int):a * FnNegate( b ) => a - FnNegate( b )
+AODU_1:10:int_FnNegate(int):-1 => 1
+AOIU_1:12:int_FnNegate(int):d => -d
+AOIU_2:13:int_FnNegate(int):d => -d
+AOIU_3:15:int_FnNegate(int):neg => -neg
+AOIU_4:20:int_FnMinus(int,int):a => -a
+AOIU_5:20:int_FnMinus(int,int):b => -b
+AOIS_1:10:int_FnNegate(int):a => ++a
+AOIS_2:10:int_FnNegate(int):a => --a
+AOIS_3:10:int_FnNegate(int):a => a++
+AOIS_4:10:int_FnNegate(int):a => a--
+AOIS_5:11:int_FnNegate(int):a => ++a
+AOIS_6:11:int_FnNegate(int):a => --a
+AOIS_7:11:int_FnNegate(int):a => a++
+AOIS_8:11:int_FnNegate(int):a => a--
+AOIS_9:12:int_FnNegate(int):d => ++d
+AOIS_10:12:int_FnNegate(int):d => --d
+AOIS_11:12:int_FnNegate(int):d => d++
+AOIS_12:12:int_FnNegate(int):d => d--
+AOIS_13:13:int_FnNegate(int):d => ++d
+AOIS_14:13:int_FnNegate(int):d => --d
+AOIS_15:13:int_FnNegate(int):d => d++
+AOIS_16:13:int_FnNegate(int):d => d--
+AOIS_17:15:int_FnNegate(int):neg => neg++
+AOIS_18:15:int_FnNegate(int):neg => neg--
+AOIS_19:20:int_FnMinus(int,int):a => ++a
+AOIS_20:20:int_FnMinus(int,int):a => --a
+AOIS_21:20:int_FnMinus(int,int):a => a++
+AOIS_22:20:int_FnMinus(int,int):a => a--
+AOIS_23:20:int_FnMinus(int,int):b => ++b
+AOIS_24:20:int_FnMinus(int,int):b => --b
+AOIS_25:20:int_FnMinus(int,int):b => b++
+AOIS_26:20:int_FnMinus(int,int):b => b--
+ROR_1:11:int_FnNegate(int): a != 0  =>   a > 0
+ROR_2:11:int_FnNegate(int): a != 0  =>   a >= 0
+ROR_3:11:int_FnNegate(int): a != 0  =>   a < 0
+ROR_4:11:int_FnNegate(int): a != 0  =>   a <= 0
+ROR_5:11:int_FnNegate(int): a != 0  =>   a == 0
+COI_1:10:int_FnNegate(int): a < 0  =>  !(a < 0)
+COI_2:11:int_FnNegate(int): a != 0  =>  !(a != 0)
+LOI_1:10:int_FnNegate(int):a => ~a
+LOI_2:11:int_FnNegate(int):a => ~a
+LOI_3:12:int_FnNegate(int):d => ~d
+LOI_4:13:int_FnNegate(int):d => ~d
+LOI_5:15:int_FnNegate(int):neg => ~neg
+LOI_6:20:int_FnMinus(int,int):a => ~a
+LOI_7:20:int_FnMinus(int,int):b => ~b
+ASRS_1:12:int_FnNegate(int):neg += d => neg /= d
+ASRS_2:12:int_FnNegate(int):neg += d => neg *= d
+ASRS_3:12:int_FnNegate(int):neg += d => neg -= d
+ASRS_4:12:int_FnNegate(int):neg += d => neg %= d
+ASRS_5:13:int_FnNegate(int):a += d => a /= d
+ASRS_6:13:int_FnNegate(int):a += d => a *= d
+ASRS_7:13:int_FnNegate(int):a += d => a -= d
+ASRS_8:13:int_FnNegate(int):a += d => a %= d

@@ -1,0 +1,31 @@
+AORS_1:10:int_numZero(int):i++ => i--
+AORS_2:12:int_numZero(int):count++ => count--
+AODS_1:12:int_numZero(int):count++ => count
+AOIU_1:15:int_numZero(int):count => -count
+AOIS_1:10:int_numZero(int):i => ++i
+AOIS_2:10:int_numZero(int):i => --i
+AOIS_3:10:int_numZero(int):i => i++
+AOIS_4:10:int_numZero(int):i => i--
+AOIS_5:10:int_numZero(int):arr.length => ++arr.length
+AOIS_6:10:int_numZero(int):arr.length => --arr.length
+AOIS_7:10:int_numZero(int):arr.length => arr.length++
+AOIS_8:10:int_numZero(int):arr.length => arr.length--
+AOIS_9:11:int_numZero(int):i => ++i
+AOIS_10:11:int_numZero(int):i => --i
+AOIS_11:11:int_numZero(int):i => i++
+AOIS_12:11:int_numZero(int):i => i--
+AOIS_13:15:int_numZero(int):count => count++
+AOIS_14:15:int_numZero(int):count => count--
+ROR_1:11:int_numZero(int): arr[i] == 0  =>   arr[i] > 0
+ROR_2:11:int_numZero(int): arr[i] == 0  =>   arr[i] >= 0
+ROR_3:11:int_numZero(int): arr[i] == 0  =>   arr[i] < 0
+ROR_4:11:int_numZero(int): arr[i] == 0  =>   arr[i] <= 0
+ROR_5:11:int_numZero(int): arr[i] == 0  =>   arr[i] != 0
+COI_1:10:int_numZero(int): i < arr.length  =>  !(i < arr.length)
+COI_2:11:int_numZero(int): arr[i] == 0  =>  !(arr[i] == 0)
+LOI_1:10:int_numZero(int):i => ~i
+LOI_2:10:int_numZero(int):arr.length => -arr.length
+LOI_3:10:int_numZero(int):i => ~i
+LOI_4:11:int_numZero(int):i => ~i
+LOI_5:12:int_numZero(int):count => ~count
+LOI_6:15:int_numZero(int):count => ~count

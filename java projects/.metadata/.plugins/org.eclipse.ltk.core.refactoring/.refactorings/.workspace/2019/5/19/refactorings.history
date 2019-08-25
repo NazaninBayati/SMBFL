@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;commons-lang&apos; to &apos;commons-lang-master&apos;&#x0D;&#x0A;- Original element: &apos;commons-lang&apos;&#x0D;&#x0A;- Renamed element: &apos;commons-lang&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;commons-lang&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=commons-lang" name="commons-lang-master" references="true" stamp="1557550483513" version="1.0"/>
+</session>

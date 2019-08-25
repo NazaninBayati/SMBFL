@@ -1,0 +1,5 @@
+FAULT_1 1 de/susebox/java/io/ExtIOException.cpp 
+FAULT_2 2 de/susebox/java/io/ExtIOException.cpp
+FAULT_5 1 de/susebox/java/util/AbstractTokenizer.cpp 
+FAULT_6 2 de/susebox/java/util/AbstractTokenizer.cpp
+FAULT_9 1 de/susebox/java/lang/ExtIndexOutOfBoundsException.cpp

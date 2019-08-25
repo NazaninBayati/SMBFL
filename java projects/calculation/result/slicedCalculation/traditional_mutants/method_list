@@ -1,0 +1,2 @@
+int_FnNegate(int)
+int_FnMinus(int,int)

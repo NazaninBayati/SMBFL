@@ -1,0 +1,77 @@
+AORB_1:9:boolean_isDivisible(int,int):j % i => j * i
+AORB_2:9:boolean_isDivisible(int,int):j % i => j / i
+AORB_3:9:boolean_isDivisible(int,int):j % i => j + i
+AORB_4:9:boolean_isDivisible(int,int):j % i => j - i
+AORB_5:28:int_printPrimes(int):numPrimes - 1 => numPrimes * 1
+AORB_6:28:int_printPrimes(int):numPrimes - 1 => numPrimes / 1
+AORB_7:28:int_printPrimes(int):numPrimes - 1 => numPrimes % 1
+AORB_8:28:int_printPrimes(int):numPrimes - 1 => numPrimes + 1
+AORS_1:26:int_printPrimes(int):curPrime++ => curPrime--
+AORS_2:28:int_printPrimes(int):i++ => i--
+AORS_3:36:int_printPrimes(int):numPrimes++ => numPrimes--
+AODS_1:26:int_printPrimes(int):curPrime++ => curPrime
+AODS_2:36:int_printPrimes(int):numPrimes++ => numPrimes
+AOIU_1:29:int_printPrimes(int):i => -i
+AOIU_2:29:int_printPrimes(int):curPrime => -curPrime
+AOIU_3:35:int_printPrimes(int):curPrime => -curPrime
+AOIS_1:9:boolean_isDivisible(int,int):j => ++j
+AOIS_2:9:boolean_isDivisible(int,int):j => --j
+AOIS_3:9:boolean_isDivisible(int,int):j => j++
+AOIS_4:9:boolean_isDivisible(int,int):j => j--
+AOIS_5:9:boolean_isDivisible(int,int):i => ++i
+AOIS_6:9:boolean_isDivisible(int,int):i => --i
+AOIS_7:9:boolean_isDivisible(int,int):i => i++
+AOIS_8:9:boolean_isDivisible(int,int):i => i--
+AOIS_9:25:int_printPrimes(int):numPrimes => ++numPrimes
+AOIS_10:25:int_printPrimes(int):numPrimes => --numPrimes
+AOIS_11:25:int_printPrimes(int):numPrimes => numPrimes++
+AOIS_12:25:int_printPrimes(int):numPrimes => numPrimes--
+AOIS_13:25:int_printPrimes(int):n => ++n
+AOIS_14:25:int_printPrimes(int):n => --n
+AOIS_15:25:int_printPrimes(int):n => n++
+AOIS_16:25:int_printPrimes(int):n => n--
+AOIS_17:28:int_printPrimes(int):i => ++i
+AOIS_18:28:int_printPrimes(int):i => --i
+AOIS_19:28:int_printPrimes(int):i => i++
+AOIS_20:28:int_printPrimes(int):i => i--
+AOIS_21:28:int_printPrimes(int):numPrimes => ++numPrimes
+AOIS_22:28:int_printPrimes(int):numPrimes => --numPrimes
+AOIS_23:28:int_printPrimes(int):numPrimes => numPrimes++
+AOIS_24:28:int_printPrimes(int):numPrimes => numPrimes--
+AOIS_25:29:int_printPrimes(int):i => i++
+AOIS_26:29:int_printPrimes(int):i => i--
+AOIS_27:29:int_printPrimes(int):curPrime => curPrime++
+AOIS_28:29:int_printPrimes(int):curPrime => curPrime--
+AOIS_29:35:int_printPrimes(int):curPrime => ++curPrime
+AOIS_30:35:int_printPrimes(int):curPrime => --curPrime
+AOIS_31:35:int_printPrimes(int):curPrime => curPrime++
+AOIS_32:35:int_printPrimes(int):curPrime => curPrime--
+ROR_1:9:boolean_isDivisible(int,int): j % i == 0  =>   j % i > 0
+ROR_2:9:boolean_isDivisible(int,int): j % i == 0  =>   j % i >= 0
+ROR_3:9:boolean_isDivisible(int,int): j % i == 0  =>   j % i < 0
+ROR_4:9:boolean_isDivisible(int,int): j % i == 0  =>   j % i <= 0
+ROR_5:9:boolean_isDivisible(int,int): j % i == 0  =>   j % i != 0
+ROR_6:28:int_printPrimes(int): i <= numPrimes - 1  =>   i > numPrimes - 1
+ROR_7:28:int_printPrimes(int): i <= numPrimes - 1  =>   i >= numPrimes - 1
+ROR_8:28:int_printPrimes(int): i <= numPrimes - 1  =>   i < numPrimes - 1
+ROR_9:28:int_printPrimes(int): i <= numPrimes - 1  =>   i == numPrimes - 1
+ROR_10:28:int_printPrimes(int): i <= numPrimes - 1  =>   i != numPrimes - 1
+COI_1:9:boolean_isDivisible(int,int): j % i == 0  =>  !(j % i == 0)
+COI_2:25:int_printPrimes(int): numPrimes < n  =>  !(numPrimes < n)
+COI_3:27:int_printPrimes(int): isPrime  =>  !isPrime
+COI_4:28:int_printPrimes(int): i <= numPrimes - 1  =>  !(i <= numPrimes - 1)
+COI_5:30:int_printPrimes(int): isPrime  =>  !isPrime
+COI_6:34:int_printPrimes(int): isPrime  =>  !isPrime
+LOI_1:9:boolean_isDivisible(int,int):j => ~j
+LOI_2:9:boolean_isDivisible(int,int):i => ~i
+LOI_3:25:int_printPrimes(int):numPrimes => ~numPrimes
+LOI_4:25:int_printPrimes(int):n => ~n
+LOI_5:26:int_printPrimes(int):curPrime => ~curPrime
+LOI_6:28:int_printPrimes(int):i => ~i
+LOI_7:28:int_printPrimes(int):numPrimes => ~numPrimes
+LOI_8:28:int_printPrimes(int):i => ~i
+LOI_9:29:int_printPrimes(int):i => ~i
+LOI_10:29:int_printPrimes(int):curPrime => ~curPrime
+LOI_11:35:int_printPrimes(int):numPrimes => ~numPrimes
+LOI_12:35:int_printPrimes(int):curPrime => ~curPrime
+LOI_13:36:int_printPrimes(int):numPrimes => ~numPrimes

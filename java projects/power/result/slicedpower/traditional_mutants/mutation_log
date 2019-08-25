@@ -1,0 +1,25 @@
+AOIU_1:10:int_power(int,int):left => -left
+AOIU_2:14:int_power(int,int):rslt => -rslt
+AOIS_1:10:int_power(int,int):left => ++left
+AOIS_2:10:int_power(int,int):left => --left
+AOIS_3:10:int_power(int,int):left => left++
+AOIS_4:10:int_power(int,int):left => left--
+AOIS_5:11:int_power(int,int):right => ++right
+AOIS_6:11:int_power(int,int):right => --right
+AOIS_7:11:int_power(int,int):right => right++
+AOIS_8:11:int_power(int,int):right => right--
+AOIS_9:14:int_power(int,int):rslt => rslt++
+AOIS_10:14:int_power(int,int):rslt => rslt--
+ROR_1:11:int_power(int,int): right == 0  =>   right > 0
+ROR_2:11:int_power(int,int): right == 0  =>   right >= 0
+ROR_3:11:int_power(int,int): right == 0  =>   right < 0
+ROR_4:11:int_power(int,int): right == 0  =>   right <= 0
+ROR_5:11:int_power(int,int): right == 0  =>   right != 0
+COI_1:11:int_power(int,int): right == 0  =>  !(right == 0)
+LOI_1:10:int_power(int,int):left => ~left
+LOI_2:11:int_power(int,int):right => ~right
+LOI_3:14:int_power(int,int):rslt => ~rslt
+ASRS_1:12:int_power(int,int):rslt -= 1 => rslt += 1
+ASRS_2:12:int_power(int,int):rslt -= 1 => rslt /= 1
+ASRS_3:12:int_power(int,int):rslt -= 1 => rslt *= 1
+ASRS_4:12:int_power(int,int):rslt -= 1 => rslt %= 1

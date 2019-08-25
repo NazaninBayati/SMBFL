@@ -1,0 +1,4 @@
+void_quickSort(int)
+void_quickSort(int,int,int)
+int_partition(int,int,int)
+void_main(java.lang.String)

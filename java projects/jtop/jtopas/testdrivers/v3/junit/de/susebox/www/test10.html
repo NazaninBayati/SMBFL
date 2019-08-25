@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+	"http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<title>C++ FAQ LITE --</title>
+<meta name="FILENAME" content="index.html">
+<meta name="ABSTRACT" content="C++ FAQ LITE --">
+<meta name="OWNER"    content="cline@parashift.com">
+<meta name="AUTHOR"   content="Marshall Cline, cline@parashift.com">
+<meta http-equiv="Content-Type" content="text/html; charset=iso8859-1">
+<link rev=made href="mailto:cline@parashift.com">
+<style>
+  <!--
+  body       { font-family: arial; color: black; background: white }
+  .CodeBlock { color: black; background-color: #dfdfdf; margin-left: 30px; margin-right: 30px; padding: 5pt }
+  .FaqTitle  { color: black; background-color: gold }
+  ul         { margin-bottom: 1px; margin-top: 1px }
+  ol         { margin-bottom: 1px; margin-top: 1px }
+  li         { margin-bottom: 4px; margin-top: 4px }
+  a          { color: blue }
+  a:hover    { color: red }
+  -->
+</style>
+</head>
+<body>
+<h1><a name="top"></a><em><big>C++ FAQ L<small>ITE</small></big></em> &#151; <small>Frequently Asked Questions</small><br>
+<small><small>(<a href="copy-permissions.html#faq-1.2" title="[1.2] Copyright Notice">Copyright&nbsp;&copy; 1991-2002</a>,
+<a href="http://www.parashift.com/" title="www.parashift.com/" target='_blank'>Marshall Cline</a>, <a href="mailto:cline@parashift.com" title="cline@parashift.com"><tt>cline@parashift.com</tt></a>)</small></small></h1>
+<hr>
+<h3>Improve network response:</h3>
+<ul>
+
+<li>Use the closest mirror site:
+<a href="http://www.parashift.com/c++-faq-lite/" title="www.parashift.com/c++-faq-lite/">USA</a>,
+<a href="http://new-brunswick.net/workshop/c++/faq" title="new-brunswick.net/workshop/c++/faq">Canada</a>,
+<a href="http://caor.ensmp.fr/FAQ/c++-faq-lite/" title="caor.ensmp.fr/FAQ/c++-faq-lite/">France</a>,
+<a href="http://www.informatik.uni-konstanz.de/~kuehl/cpp/cppfaq.htm" title="www.informatik.uni-konstanz.de/~kuehl/cpp/cppfaq.htm">Germany</a>,
+<a href="http://snet.wit.ie/GreenSpirit/c++-faq-lite/" title="snet.wit.ie/GreenSpirit/c++-faq-lite/">Ireland</a>,
+<a href="http://spazioinwind.libero.it/fanelia/cpp-faq-en/" title="spazioinwind.libero.it/fanelia/cpp-faq-en/">Italy</a>,
+<a href="http://home.wanadoo.nl/efx/c++-faq/" title="home.wanadoo.nl/efx/c++-faq/">the Netherlands</a>,
+<a href="http://www.gderek.lolo.com.pl/c++-faq/" title="www.gderek.lolo.com.pl/c++-faq/">Poland</a>,
+<a href="http://geneura.ugr.es/~jmerelo/c++-faq/" title="geneura.ugr.es/~jmerelo/c++-faq/">Spain</a>,
+<a href="http://www.cis.nctu.edu.tw/chinese/doc/research/c++/C++FAQ-English/" title="www.cis.nctu.edu.tw/chinese/doc/research/c++/C++FAQ-English/">Taiwan</a>.
+</li>
+
+<li>Browse the FAQ off-line:
+<a href="on-line-availability.html#faq-2.2" title="[2.2] How can I get a copy of all the HTML files of C++ FAQ Lite so I can read them Off-Line?">Use the one-click download feature to get
+your own local copy</a>.</li>
+
+</ul>
+
+<h3>Available in several languages:</h3>
+<ul>
+<li><a href="http://www.parashift.com/c++-faq-lite/"
+       title="www.parashift.com/c++-faq-lite/"
+       target='_blank'>English</a>.</li>
+<li><a href="http://www.sunistudio.com/cppfaq/"
+       title="www.sunistudio.com/cppfaq/"
+       target='_blank'>Chinese translation using GB encoding</a> (typically used on the Chinese mainland).</li>
+<li><a href="http://www.cis.nctu.edu.tw/chinese/doc/research/c++/C++FAQ-Chinese/"
+       title="www.cis.nctu.edu.tw/chinese/doc/research/c++/C++FAQ-Chinese/"
+       target='_blank'>Chinese translation using Big5 encoding</a> (typically used in Taiwan). <img src="updated.gif" alt="UPDATED!"></li>
+<li><a href="http://www.ifrance.com/jlecomte/c++/c++-faq-lite/index-fr.html"
+       title="www.ifrance.com/jlecomte/c++/c++-faq-lite/index-fr.html"
+       target='_blank'>French translation</a>.</li>
+<li><a href="http://www.arnaut.eti.br/op/CPPFL00.htm"
+       title="www.arnaut.eti.br/op/CPPFL00.htm"
+       target='_blank'>Portuguese translation</a>. <img src="updated.gif" alt="UPDATED!"></li>
+<li><a href="http://quirks.chat.ru/cpp/faq/"
+       title="quirks.chat.ru/cpp/faq/"
+       target='_blank'>Russian translation</a>.</li>
+</ul>
+
+<!--BEGIN_REMOVE_FROM_RAW_TEXT-->
+<form method=get action="http://www.google.com/search">
+<!--END_REMOVE_FROM_RAW_TEXT-->
+
+<h3><a name="search-the-faq"></a>Look up stuff:</h3>
+<ul>
+
+<li>Find a generic topic with the
+<a href="#table-of-contents" title="Table of contents">table of contents
+(coarse-grained; 37 topics)</a>.</li>
+
+<li>Find a specific topic with the
+<a href="subject-index.html" title="Subject index; 1776 links to 1246 topics">extensive subject index
+(fine-grained; 1776 links to 1246 topics)</a>.</li>
+
+<!--BEGIN_REMOVE_FROM_RAW_TEXT-->
+<li>
+Find a <em>really</em> specific topic:
+<input type=text name=q size=25 maxlength=255 value="">
+<input type=submit name=btnG value="Search the C++ FAQ">
+<input type=hidden name=sitesearch value="www.parashift.com">
+... thanks to
+<a href="http://www.google.com/" title="www.google.com">google.com</a>
+<!-- <img src="http://www.google.com/logos/Logo_40wht.gif" border="0" ALT="Google" align="absmiddle"> -->
+</li>
+<!--END_REMOVE_FROM_RAW_TEXT-->
+
+<li><a name="chain-of-changed-faqs"></a>Find the changed topics
+by following the <a href="on-line-availability.html#faq-2.5" title="Recent changes are linked into a &quot;chain&quot;">chain of recent changes
+(70 changes for 6/02 and 9/02)</a>.</li>
+
+<li>Find the changed topics by going to the
+<a href="recent-changes.html" title="Recent changes are grouped together into a single list">table of recent changes</a>.</li>
+
+</ul>
+
+<!--BEGIN_REMOVE_FROM_RAW_TEXT-->
+</form>
+<!--END_REMOVE_FROM_RAW_TEXT-->
+
+<h3><a name="table-of-contents"></a>Table of Contents:</h3>
+<ul>
+<li><a href="copy-permissions.html" title="[1] Copying permissions">[1] Copying permissions</a></li>
+<li><a href="on-line-availability.html" title="[2] On-line sites that distribute this document">[2] On-line sites that distribute this document</a></li>
+<li><a href="faq-book.html" title="[3] C++-FAQ-Book versus C++-FAQ-Lite">[3] <em>C++-FAQ-Book</em> versus <em>C++-FAQ-Lite</em></a></li>
+<li><a href="recent-changes.html" title="[4] Recent changes to this document">[4] Recent changes to this document</a></li>
+<li><a href="how-to-post.html" title="[5] Netiquette when posting to comp.lang.c++">[5] Netiquette when posting to <tt>comp.lang.c++</tt></a></li>
+<li><a href="big-picture.html" title="[6] Big Picture issues">[6] Big Picture issues</a></li>
+<li><a href="classes-and-objects.html" title="[7] Classes and objects">[7] Classes and objects</a></li>
+<li><a href="references.html" title="[8] References">[8] References</a></li>
+<li><a href="inline-functions.html" title="[9] Inline functions">[9] Inline functions</a></li>
+<li><a href="ctors.html" title="[10] Constructors">[10] Constructors</a></li>
+<li><a href="dtors.html" title="[11] Destructors">[11] Destructors</a></li>
+<li><a href="assignment-operators.html" title="[12] Assignment operators">[12] Assignment operators</a></li>
+<li><a href="operator-overloading.html" title="[13] Operator overloading">[13] Operator overloading</a></li>
+<li><a href="friends.html" title="[14] Friends">[14] Friends</a></li>
+<li><a href="input-output.html" title="[15] Input/output via &lt;iostream&gt; and &lt;cstdio&gt;">[15] Input/output via <tt>&lt;iostream&gt;</tt> and <tt>&lt;cstdio&gt;</tt></a></li>
+<li><a href="freestore-mgmt.html" title="[16] Freestore management">[16] Freestore management</a></li>
+<li><a href="exceptions.html" title="[17] Exceptions and error handling">[17] Exceptions and error handling</a></li>
+<li><a href="const-correctness.html" title="[18] Const correctness">[18] Const correctness</a></li>
+<li><a href="basics-of-inheritance.html" title="[19] Inheritance -- basics">[19] Inheritance &#151; basics</a></li>
+<li><a href="virtual-functions.html" title="[20] Inheritance -- virtual functions">[20] Inheritance &#151; <tt>virtual</tt> functions</a></li>
+<li><a href="proper-inheritance.html" title="[21] Inheritance -- proper inheritance and substitutability">[21] Inheritance &#151; proper inheritance and substitutability</a></li>
+<li><a href="abcs.html" title="[22] Inheritance -- abstract base classes (ABCs)">[22] Inheritance &#151; abstract base classes (ABCs)</a></li>
+<li><a href="strange-inheritance.html" title="[23] Inheritance -- what your mother never told you">[23] Inheritance &#151; what your mother never told you</a></li>
+<li><a href="private-inheritance.html" title="[24] Inheritance -- private and protected inheritance">[24] Inheritance &#151; <tt>private</tt> and <tt>protected</tt> inheritance</a></li>
+<li><a href="intrinsic-types.html" title="[25] Built-in / intrinsic / primitive data types">[25] Built-in / intrinsic / primitive data types</a></li>
+<li><a href="coding-standards.html" title="[26] Coding standards">[26] Coding standards</a></li>
+<li><a href="how-to-learn-cpp.html" title="[27] Learning OO/C++">[27] Learning OO/C++</a></li>
+<li><a href="newbie.html" title="[28] Newbie Questions / Answers">[28] Newbie Questions / Answers</a></li>
+<li><a href="smalltalk.html" title="[29] Learning C++ if you already know Smalltalk">[29] Learning C++ if you already know Smalltalk</a></li>
+<li><a href="value-vs-ref-semantics.html" title="[30] Reference and value semantics">[30] Reference and value semantics</a></li>
+<li><a href="mixing-c-and-cpp.html" title="[31] How to mix C and C++">[31] How to mix C and C++</a></li>
+<li><a href="pointers-to-members.html" title="[32] Pointers to member functions">[32] Pointers to member functions</a></li>
+<li><a href="containers-and-templates.html" title="[33] Container classes and templates">[33] Container classes and templates</a></li>
+<li><a href="class-libraries.html" title="[34] Class libraries">[34] Class libraries</a></li>
+<li><a href="compiler-dependencies.html" title="[35] Compiler dependencies">[35] Compiler dependencies</a></li>
+<li><a href="misc-technical-issues.html" title="[36] Miscellaneous technical issues">[36] Miscellaneous technical issues</a></li>
+<li><a href="misc-environmental-issues.html" title="[37] Miscellaneous environmental issues">[37] Miscellaneous environmental issues</a></li></ul>
+
+
+<!--BEGIN_REMOVE_FROM_RAW_TEXT-->
+<hr>
+<table width=180 border=0 cellpadding=0 cellspacing=0><tr><td align=center><font size=-1><a href="http://www.links2go.com/topic/C++_Programming" title="www.links2go.com/topic/C++_Programming" $targetIsOutsideTheFAQ><img alt="Key Resource" src="links-to-go-award.gif" width=121 height=121 border=0><br><b><i>Links<sup><small>2</small></sup>Go</i> Key Resource</b><br>C++ Programming Topic</a></font></td></tr></table>
+<A HREF="http://www.devx.com" title="www.devx.com" $targetIsOutsideTheFAQ><IMG SRC="badge_w.gif" WIDTH=100 HEIGHT=60 BORDER=0 ALT="Click here to visit The Development Exchange"></A>
+<A HREF="http://www.devx.com" title="www.devx.com" $targetIsOutsideTheFAQ><IMG SRC="badge2_b.gif" WIDTH=100 HEIGHT=60 BORDER=0 ALT="Click here to visit The Development Exchange"></A>
+<!--END_REMOVE_FROM_RAW_TEXT-->
+<hr>
+<p><a name="bottom"></a>
+<a href="mailto:cline@parashift.com" title="cline@parashift.com"><img src="mbox.gif" height=26 width=89 alt="E-Mail">&nbsp;E-mail the author</a><br>
+[&nbsp;<a href="index.html" title="C++ FAQ Lite"><em>C++ FAQ Lite</em></a>
+|&nbsp;<a href="index.html#table-of-contents" title="Table of contents">Table&nbsp;of&nbsp;contents</a>
+|&nbsp;<a href="subject-index.html" title="Subject index; 1776 links to 1246 topics">Subject&nbsp;index</a>
+|&nbsp;<a href="copy-permissions.html#faq-1.1" title="[1.1] Author">About&nbsp;the&nbsp;author</a>
+|&nbsp;<a href="copy-permissions.html#faq-1.2" title="[1.2] Copyright Notice">&copy;</a>
+|&nbsp;<a href="on-line-availability.html#faq-2.2" title="[2.2] How can I get a copy of all the HTML files of C++ FAQ Lite so I can read them Off-Line?">Download&nbsp;your&nbsp;own&nbsp;copy</a>&nbsp;]<br>
+<small>Revised Sep 15, 2002</small>
+</body>
+</html>

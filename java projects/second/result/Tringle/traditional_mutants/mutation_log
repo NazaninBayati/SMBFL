@@ -1,0 +1,55 @@
+ROR_1:18:int_Type_Area(int,int,int): a <= 0  =>   a > 0
+ROR_2:18:int_Type_Area(int,int,int): a <= 0  =>   a >= 0
+ROR_3:18:int_Type_Area(int,int,int): a <= 0  =>   a < 0
+ROR_4:18:int_Type_Area(int,int,int): a <= 0  =>   a == 0
+ROR_5:18:int_Type_Area(int,int,int): a <= 0  =>   a != 0
+ROR_6:18:int_Type_Area(int,int,int): b <= 0  =>   b > 0
+ROR_7:18:int_Type_Area(int,int,int): b <= 0  =>   b >= 0
+ROR_8:18:int_Type_Area(int,int,int): b <= 0  =>   b < 0
+ROR_9:18:int_Type_Area(int,int,int): b <= 0  =>   b == 0
+ROR_10:18:int_Type_Area(int,int,int): b <= 0  =>   b != 0
+ROR_11:18:int_Type_Area(int,int,int): c <= 0  =>   c > 0
+ROR_12:18:int_Type_Area(int,int,int): c <= 0  =>   c >= 0
+ROR_13:18:int_Type_Area(int,int,int): c <= 0  =>   c < 0
+ROR_14:18:int_Type_Area(int,int,int): c <= 0  =>   c == 0
+ROR_15:18:int_Type_Area(int,int,int): c <= 0  =>   c != 0
+ROR_16:18:int_Type_Area(int,int,int): a + b <= c  =>   a + b > c
+ROR_17:18:int_Type_Area(int,int,int): a + b <= c  =>   a + b >= c
+ROR_18:18:int_Type_Area(int,int,int): a + b <= c  =>   a + b < c
+ROR_19:18:int_Type_Area(int,int,int): a + b <= c  =>   a + b == c
+ROR_20:18:int_Type_Area(int,int,int): a + b <= c  =>   a + b != c
+ROR_21:18:int_Type_Area(int,int,int): a + c <= b  =>   a + c > b
+ROR_22:18:int_Type_Area(int,int,int): a + c <= b  =>   a + c >= b
+ROR_23:18:int_Type_Area(int,int,int): a + c <= b  =>   a + c < b
+ROR_24:18:int_Type_Area(int,int,int): a + c <= b  =>   a + c == b
+ROR_25:18:int_Type_Area(int,int,int): a + c <= b  =>   a + c != b
+ROR_26:18:int_Type_Area(int,int,int): b + c <= a  =>   b + c > a
+ROR_27:18:int_Type_Area(int,int,int): b + c <= a  =>   b + c >= a
+ROR_28:18:int_Type_Area(int,int,int): b + c <= a  =>   b + c < a
+ROR_29:18:int_Type_Area(int,int,int): b + c <= a  =>   b + c == a
+ROR_30:18:int_Type_Area(int,int,int): b + c <= a  =>   b + c != a
+ROR_31:22:int_Type_Area(int,int,int): a == b  =>   a > b
+ROR_32:22:int_Type_Area(int,int,int): a == b  =>   a >= b
+ROR_33:22:int_Type_Area(int,int,int): a == b  =>   a < b
+ROR_34:22:int_Type_Area(int,int,int): a == b  =>   a <= b
+ROR_35:22:int_Type_Area(int,int,int): a == b  =>   a != b
+ROR_36:22:int_Type_Area(int,int,int): b == c  =>   b > c
+ROR_37:22:int_Type_Area(int,int,int): b == c  =>   b >= c
+ROR_38:22:int_Type_Area(int,int,int): b == c  =>   b < c
+ROR_39:22:int_Type_Area(int,int,int): b == c  =>   b <= c
+ROR_40:22:int_Type_Area(int,int,int): b == c  =>   b != c
+ROR_41:22:int_Type_Area(int,int,int): a == c  =>   a > c
+ROR_42:22:int_Type_Area(int,int,int): a == c  =>   a >= c
+ROR_43:22:int_Type_Area(int,int,int): a == c  =>   a < c
+ROR_44:22:int_Type_Area(int,int,int): a == c  =>   a <= c
+ROR_45:22:int_Type_Area(int,int,int): a == c  =>   a != c
+ROR_46:25:int_Type_Area(int,int,int): a == b  =>   a > b
+ROR_47:25:int_Type_Area(int,int,int): a == b  =>   a >= b
+ROR_48:25:int_Type_Area(int,int,int): a == b  =>   a < b
+ROR_49:25:int_Type_Area(int,int,int): a == b  =>   a <= b
+ROR_50:25:int_Type_Area(int,int,int): a == b  =>   a != b
+ROR_51:25:int_Type_Area(int,int,int): b == c  =>   b > c
+ROR_52:25:int_Type_Area(int,int,int): b == c  =>   b >= c
+ROR_53:25:int_Type_Area(int,int,int): b == c  =>   b < c
+ROR_54:25:int_Type_Area(int,int,int): b == c  =>   b <= c
+ROR_55:25:int_Type_Area(int,int,int): b == c  =>   b != c

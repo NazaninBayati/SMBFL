@@ -1,0 +1,9 @@
+Universe file organization
+
+1. vk-1.class.junit.universe/vk.class.junit.universe: 
+	- JUnit test cases.
+	- vk-1.class.junit.universe: common test cases between vk-1 and vk.
+	- vk.class.junit.universe: common test cases between vk and vk+1. 
+
+2. vk.class.junit.universe.all
+	- include all test cases for vk.

@@ -1,0 +1,7 @@
+int_FnNegate(int)
+int_FnMinus(int,int)
+boolean_DifferentSigns(int,int)
+int_abs(int)
+int_FnTimes(int,int)
+int_DefineAndRoundFraction(int,int)
+int_FnDivide(int,int)

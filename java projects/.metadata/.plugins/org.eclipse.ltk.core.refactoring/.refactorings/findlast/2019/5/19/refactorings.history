@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;filndLastTest.java&apos; to &apos;findLastTest.java&apos;&#x0D;&#x0A;- Original project: &apos;findlast&apos;&#x0D;&#x0A;- Original element: &apos;filndLastTest.java&apos;&#x0D;&#x0A;- Renamed element: &apos;findLastTest.java&apos;" description="Rename compilation unit &apos;filndLastTest.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{filndLastTest.java" name="findLastTest.java" references="false" stamp="1557575562973" version="1.0"/>
+</session>

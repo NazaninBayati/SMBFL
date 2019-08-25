@@ -1,0 +1,48 @@
+AORS_1:15:int_findVal(int,int):i++ => i--
+AODU_1:14:int_findVal(int,int):-1 => 1
+AOIU_1:17:int_findVal(int,int):i => -i
+AOIU_2:20:int_findVal(int,int):findVal => -findVal
+AOIU_3:47:int_getN():inputInt => -inputInt
+AOIS_1:15:int_findVal(int,int):i => ++i
+AOIS_2:15:int_findVal(int,int):i => --i
+AOIS_3:15:int_findVal(int,int):i => i++
+AOIS_4:15:int_findVal(int,int):i => i--
+AOIS_5:15:int_findVal(int,int):numbers.length => ++numbers.length
+AOIS_6:15:int_findVal(int,int):numbers.length => --numbers.length
+AOIS_7:15:int_findVal(int,int):numbers.length => numbers.length++
+AOIS_8:15:int_findVal(int,int):numbers.length => numbers.length--
+AOIS_9:16:int_findVal(int,int):i => ++i
+AOIS_10:16:int_findVal(int,int):i => --i
+AOIS_11:16:int_findVal(int,int):i => i++
+AOIS_12:16:int_findVal(int,int):i => i--
+AOIS_13:16:int_findVal(int,int):val => ++val
+AOIS_14:16:int_findVal(int,int):val => --val
+AOIS_15:16:int_findVal(int,int):val => val++
+AOIS_16:16:int_findVal(int,int):val => val--
+AOIS_17:17:int_findVal(int,int):i => ++i
+AOIS_18:17:int_findVal(int,int):i => --i
+AOIS_19:17:int_findVal(int,int):i => i++
+AOIS_20:17:int_findVal(int,int):i => i--
+AOIS_21:20:int_findVal(int,int):findVal => findVal++
+AOIS_22:20:int_findVal(int,int):findVal => findVal--
+AOIS_23:47:int_getN():inputInt => inputInt++
+AOIS_24:47:int_getN():inputInt => inputInt--
+ROR_1:16:int_findVal(int,int): numbers[i] == val  =>   numbers[i] > val
+ROR_2:16:int_findVal(int,int): numbers[i] == val  =>   numbers[i] >= val
+ROR_3:16:int_findVal(int,int): numbers[i] == val  =>   numbers[i] < val
+ROR_4:16:int_findVal(int,int): numbers[i] == val  =>   numbers[i] <= val
+ROR_5:16:int_findVal(int,int): numbers[i] == val  =>   numbers[i] != val
+COI_1:15:int_findVal(int,int): i < numbers.length  =>  !(i < numbers.length)
+COI_2:16:int_findVal(int,int): numbers[i] == val  =>  !(numbers[i] == val)
+LOI_1:15:int_findVal(int,int):i => ~i
+LOI_2:15:int_findVal(int,int):numbers.length => -numbers.length
+LOI_3:15:int_findVal(int,int):i => ~i
+LOI_4:16:int_findVal(int,int):i => ~i
+LOI_5:16:int_findVal(int,int):val => ~val
+LOI_6:17:int_findVal(int,int):i => ~i
+LOI_7:20:int_findVal(int,int):findVal => ~findVal
+LOI_8:47:int_getN():inputInt => ~inputInt
+ASRS_1:17:int_findVal(int,int):findVal -= i => findVal += i
+ASRS_2:17:int_findVal(int,int):findVal -= i => findVal /= i
+ASRS_3:17:int_findVal(int,int):findVal -= i => findVal *= i
+ASRS_4:17:int_findVal(int,int):findVal -= i => findVal %= i

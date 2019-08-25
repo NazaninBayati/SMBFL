@@ -1,0 +1,38 @@
+AORS_1:12:int_findLast(int,int):i-- => i++
+AODU_1:17:int_findLast(int,int):-1 => 1
+AOIU_1:14:int_findLast(int,int):i => -i
+AOIU_2:54:int_getN():inputInt => -inputInt
+AOIS_1:12:int_findLast(int,int):i => ++i
+AOIS_2:12:int_findLast(int,int):i => --i
+AOIS_3:12:int_findLast(int,int):i => i++
+AOIS_4:12:int_findLast(int,int):i => i--
+AOIS_5:13:int_findLast(int,int):i => ++i
+AOIS_6:13:int_findLast(int,int):i => --i
+AOIS_7:13:int_findLast(int,int):i => i++
+AOIS_8:13:int_findLast(int,int):i => i--
+AOIS_9:13:int_findLast(int,int):y => ++y
+AOIS_10:13:int_findLast(int,int):y => --y
+AOIS_11:13:int_findLast(int,int):y => y++
+AOIS_12:13:int_findLast(int,int):y => y--
+AOIS_13:14:int_findLast(int,int):i => i++
+AOIS_14:14:int_findLast(int,int):i => i--
+AOIS_15:54:int_getN():inputInt => inputInt++
+AOIS_16:54:int_getN():inputInt => inputInt--
+ROR_1:12:int_findLast(int,int): i > 0  =>   i >= 0
+ROR_2:12:int_findLast(int,int): i > 0  =>   i < 0
+ROR_3:12:int_findLast(int,int): i > 0  =>   i <= 0
+ROR_4:12:int_findLast(int,int): i > 0  =>   i == 0
+ROR_5:12:int_findLast(int,int): i > 0  =>   i != 0
+ROR_6:13:int_findLast(int,int): x[i] == y  =>   x[i] > y
+ROR_7:13:int_findLast(int,int): x[i] == y  =>   x[i] >= y
+ROR_8:13:int_findLast(int,int): x[i] == y  =>   x[i] < y
+ROR_9:13:int_findLast(int,int): x[i] == y  =>   x[i] <= y
+ROR_10:13:int_findLast(int,int): x[i] == y  =>   x[i] != y
+COI_1:12:int_findLast(int,int): i > 0  =>  !(i > 0)
+COI_2:13:int_findLast(int,int): x[i] == y  =>  !(x[i] == y)
+LOI_1:12:int_findLast(int,int):i => ~i
+LOI_2:12:int_findLast(int,int):i => ~i
+LOI_3:13:int_findLast(int,int):i => ~i
+LOI_4:13:int_findLast(int,int):y => ~y
+LOI_5:14:int_findLast(int,int):i => ~i
+LOI_6:54:int_getN():inputInt => ~inputInt

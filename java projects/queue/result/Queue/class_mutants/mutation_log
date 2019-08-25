@@ -1,0 +1,6 @@
+JSI_1:7:static is inserted
+JSI_2:9:static is inserted
+JSI_3:11:static is inserted
+JSI_4:13:static is inserted
+IOD_1:65:public java.lang.String toString() is deleted.
+JDC_1:17:public JDC_1() is deleted

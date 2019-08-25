@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  JTopas - Java tokenizer and parser tools
+
+  Build file used by the Jakarta Ant utility.
+  Visit: http://jakarta.apache.org
+
+  Remarks:
+    1. To build the target "compile_junit" You need to have the 
+       junit.jar archive in Your CLASSPATH environment variable
+-->
+<project basedir="." default="compile" name="JTopas">
+
+<!-- Target Names -->
+  <property name="Project.archive" value="jtopas"/>
+  <property name="Project.version" value="0.3"/>
+  <property name="JTopasLib" value="jtopas"/>
+  <property name="JTopas-JTLib" value="jtopas-jt"/>
+
+<!-- Structure Property Definitions -->
+  <property name="src.dir" value="src"/>
+  <property name="junit.dir" value="junit"/>
+  <property name="deploy.dir" value="build"/>
+  <property name="lib.dir" value="${deploy.dir}/lib"/>
+  <property name="doc.dir" value="${deploy.dir}/doc"/>
+  <property name="javadoc.dir" value="${doc.dir}/javadoc"/>
+  <property name="classes.dir" value="${lib.dir}/classes"/>
+  <property name="export.dir" value="/tmp"/>
+  <property name="export.tag" value=""/>
+  <property name="archive.name" value="${Project.archive}-${Project.version}"/>
+  <property name="CVSModule" value="java"/>
+
+
+<!-- Target: help -->
+  <target name="help">
+    <echo message="The following targets are available:"/>
+    <echo message="  prepare:       setup destination directory structure &apos;${deploy.dir}&apos;"/>
+    <echo message="  clean:         remove destination directory structure &apos;${deploy.dir}&apos;"/>
+    <echo message="  compile:       compile the java sources into .class files"/>
+    <echo message="  compile_junit: compile the JUnit test cases"/>
+    <echo message="                 (You need to have the junit archive in Your CLASSPATH)"/>
+    <echo message="  jar:           archive the compiled classes into ${JTopasLib}.jar"/>
+    <echo message="  jar_junit:     archive the compiled test classes into ${JTopas-JTLib}.jar"/>
+    <echo message="  all:           build all targets shown above"/>
+    <echo message=" "/>
+    <echo message="Special deployment targets:"/>
+    <echo message="  archive:       make target &apos;all&apos; and build a tar&apos;ed and gnu-zipped archive(.tgz)"/>
+    <echo message="  archive_only:  build a tar&apos;ed and gnu-zipped archive(.tgz)"/>
+    <echo message=" "/>
+    <echo message="Special targets for CVS:"/>
+    <echo message="  checkin:       commit checked-out source files into the repository"/>
+    <echo message="  checkout:      checkout sources from the repository"/>
+    <echo message="  export:        get a copy of the current version from the repository"/>
+  </target>
+
+<!-- Target: prepare -->
+  <target name="prepare">
+    <mkdir dir="${deploy.dir}"/>
+    <mkdir dir="${lib.dir}"/>
+    <mkdir dir="${doc.dir}"/>
+    <mkdir dir="${javadoc.dir}"/>
+    <mkdir dir="${classes.dir}"/>
+  </target>
+
+
+<!-- Target: clean -->
+  <target name="clean">
+    <delete dir="${deploy.dir}"/>
+  </target>
+
+
+<!-- Target: compile -->
+  <target depends="prepare" name="compile">
+    <javac destdir="${classes.dir}" excludes="**/net/*" srcdir="${src.dir}"/>
+    <copy todir="${classes.dir}">
+      <fileset dir="src" includes="**/*.properties"/>
+    </copy>
+  </target>
+
+
+<!-- Target: compile_junit -->
+  <target depends="compile" name="compile_junit">
+    <javac destdir="${classes.dir}" srcdir="${junit.dir}"/>
+  </target>
+
+<!-- Target: javadoc -->
+  <target depends="prepare" name="javadoc">
+    <javadoc author="true" bottom="Copyright 2001 Heiko Blau. All rights reserved." destdir="${javadoc.dir}" packagenames="de.susebox.*" sourcepath="${src.dir}" splitindex="true" use="true" version="true" windowtitle="JTopas - Java tokenizer and parser tools"/>
+  </target>
+
+
+<!-- Target: jar -->
+ <target depends="compile" name="jar">
+    <jar basedir="${classes.dir}" excludes="**/Test*" includes="**/*.class" jarfile="${lib.dir}/${JTopasLib}.jar"/>
+ </target>
+
+<!-- Target: jar_junit -->
+ <target depends="compile_junit" name="jar_junit">
+    <jar basedir="${classes.dir}" includes="**/Test*.class" jarfile="${lib.dir}/${JTopas-JTLib}.jar"/>
+ </target>
+
+
+<!-- Target: all -->
+  <target depends="clean,javadoc,jar,jar_junit" name="all"/>
+
+
+<!-- Target: archive_only -->
+  <target name="archive_only">
+    <delete>
+      <fileset dir="." includes="**/*.tar*"/>
+    </delete>
+    <tar basedir="." excludes="**/*.class,**/*~,**/.*,**/CVS/*,**/CVSROOT/*,**/deploy.sh" tarfile="${archive.name}.tar"/>
+    <gzip src="${archive.name}.tar" zipfile="${archive.name}.tar.gz"/>
+    <delete file="${archive.name}.tar"/>
+  </target>
+
+
+<!-- Target: archive -->
+  <target depends="all,archive_only" name="archive"/>
+
+<!-- Target: checkout -->
+  <target name="checkout">
+    <cvs dest="." package="${CVSModule}"/> 
+  </target>
+
+<!-- Target: checkin -->
+  <target name="checkin">
+    <cvs command="commit"/> 
+  </target>
+
+<!-- Target: export -->
+  <target name="export">
+    <cvs command="export ${export.tag}" dest="${export.dir}" package="${CVSModule}"/> 
+  </target>
+
+</project>

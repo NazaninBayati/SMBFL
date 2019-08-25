@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="MuClipse.MutantsLaunchConfigType">
+<stringAttribute key="CLASS_CHOICE" value="slicedCountPositive.java"/>
+<stringAttribute key="CLASS_LEVEL_LIST" value="0000000000000000000000000000"/>
+<stringAttribute key="CLASS_PATH" value="bin"/>
+<stringAttribute key="MUTANT_HOME" value="result"/>
+<stringAttribute key="SRC_PATH" value="src"/>
+<stringAttribute key="TESTSET_PATH" value="unittests"/>
+<stringAttribute key="TRADITIONAL_LIST" value="111111111111111"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="CountPositive"/>
+</launchConfiguration>

@@ -1,0 +1,181 @@
+AORB_1:36:void_enqueue(java.lang.Object):back + 1 => back * 1
+AORB_2:36:void_enqueue(java.lang.Object):back + 1 => back / 1
+AORB_3:36:void_enqueue(java.lang.Object):back + 1 => back % 1
+AORB_4:36:void_enqueue(java.lang.Object):back + 1 => back - 1
+AORB_5:36:void_enqueue(java.lang.Object):(back + 1) % capacity => (back + 1) * capacity
+AORB_6:36:void_enqueue(java.lang.Object):(back + 1) % capacity => (back + 1) / capacity
+AORB_7:36:void_enqueue(java.lang.Object):(back + 1) % capacity => back + 1 + capacity
+AORB_8:36:void_enqueue(java.lang.Object):(back + 1) % capacity => back + 1 - capacity
+AORB_9:48:java.lang.Object_dequeue():front % capacity => front * capacity
+AORB_10:48:java.lang.Object_dequeue():front % capacity => front / capacity
+AORB_11:48:java.lang.Object_dequeue():front % capacity => front + capacity
+AORB_12:48:java.lang.Object_dequeue():front % capacity => front - capacity
+AORB_13:50:java.lang.Object_dequeue():front + 1 => front * 1
+AORB_14:50:java.lang.Object_dequeue():front + 1 => front / 1
+AORB_15:50:java.lang.Object_dequeue():front + 1 => front % 1
+AORB_16:50:java.lang.Object_dequeue():front + 1 => front - 1
+AORB_17:50:java.lang.Object_dequeue():(front + 1) % capacity => (front + 1) * capacity
+AORB_18:50:java.lang.Object_dequeue():(front + 1) % capacity => (front + 1) / capacity
+AORB_19:50:java.lang.Object_dequeue():(front + 1) % capacity => front + 1 + capacity
+AORB_20:50:java.lang.Object_dequeue():(front + 1) % capacity => front + 1 - capacity
+AORB_21:69:java.lang.String_toString():front + i => front * i
+AORB_22:69:java.lang.String_toString():front + i => front / i
+AORB_23:69:java.lang.String_toString():front + i => front % i
+AORB_24:69:java.lang.String_toString():front + i => front - i
+AORB_25:69:java.lang.String_toString():(front + i) % capacity => (front + i) * capacity
+AORB_26:69:java.lang.String_toString():(front + i) % capacity => (front + i) / capacity
+AORB_27:69:java.lang.String_toString():(front + i) % capacity => front + i + capacity
+AORB_28:69:java.lang.String_toString():(front + i) % capacity => front + i - capacity
+AORB_29:70:java.lang.String_toString():size - 1 => size * 1
+AORB_30:70:java.lang.String_toString():size - 1 => size / 1
+AORB_31:70:java.lang.String_toString():size - 1 => size % 1
+AORB_32:70:java.lang.String_toString():size - 1 => size + 1
+AORS_1:34:void_enqueue(java.lang.Object):size++ => size--
+AORS_2:47:java.lang.Object_dequeue():size-- => size++
+AORS_3:68:java.lang.String_toString():i++ => i--
+AODS_1:34:void_enqueue(java.lang.Object):size++ => size
+AODS_2:47:java.lang.Object_dequeue():size-- => size
+AOIU_1:19:Queue():capacity => -capacity
+AOIU_2:36:void_enqueue(java.lang.Object):back => -back
+AOIU_3:48:java.lang.Object_dequeue():front => -front
+AOIU_4:50:java.lang.Object_dequeue():front => -front
+AOIU_5:69:java.lang.String_toString():front => -front
+AOIS_1:19:Queue():capacity => ++capacity
+AOIS_2:19:Queue():capacity => --capacity
+AOIS_3:19:Queue():capacity => capacity++
+AOIS_4:19:Queue():capacity => capacity--
+AOIS_5:31:void_enqueue(java.lang.Object):size => ++size
+AOIS_6:31:void_enqueue(java.lang.Object):size => --size
+AOIS_7:31:void_enqueue(java.lang.Object):size => size++
+AOIS_8:31:void_enqueue(java.lang.Object):size => size--
+AOIS_9:31:void_enqueue(java.lang.Object):capacity => ++capacity
+AOIS_10:31:void_enqueue(java.lang.Object):capacity => --capacity
+AOIS_11:31:void_enqueue(java.lang.Object):capacity => capacity++
+AOIS_12:31:void_enqueue(java.lang.Object):capacity => capacity--
+AOIS_13:36:void_enqueue(java.lang.Object):back => ++back
+AOIS_14:36:void_enqueue(java.lang.Object):back => --back
+AOIS_15:36:void_enqueue(java.lang.Object):back => back++
+AOIS_16:36:void_enqueue(java.lang.Object):back => back--
+AOIS_17:36:void_enqueue(java.lang.Object):capacity => capacity++
+AOIS_18:36:void_enqueue(java.lang.Object):capacity => capacity--
+AOIS_19:44:java.lang.Object_dequeue():size => ++size
+AOIS_20:44:java.lang.Object_dequeue():size => --size
+AOIS_21:44:java.lang.Object_dequeue():size => size++
+AOIS_22:44:java.lang.Object_dequeue():size => size--
+AOIS_23:48:java.lang.Object_dequeue():front => ++front
+AOIS_24:48:java.lang.Object_dequeue():front => --front
+AOIS_25:48:java.lang.Object_dequeue():front => front++
+AOIS_26:48:java.lang.Object_dequeue():front => front--
+AOIS_27:48:java.lang.Object_dequeue():capacity => ++capacity
+AOIS_28:48:java.lang.Object_dequeue():capacity => --capacity
+AOIS_29:48:java.lang.Object_dequeue():capacity => capacity++
+AOIS_30:48:java.lang.Object_dequeue():capacity => capacity--
+AOIS_31:50:java.lang.Object_dequeue():front => ++front
+AOIS_32:50:java.lang.Object_dequeue():front => --front
+AOIS_33:50:java.lang.Object_dequeue():front => front++
+AOIS_34:50:java.lang.Object_dequeue():front => front--
+AOIS_35:50:java.lang.Object_dequeue():capacity => capacity++
+AOIS_36:50:java.lang.Object_dequeue():capacity => capacity--
+AOIS_37:57:boolean_isEmpty():size => ++size
+AOIS_38:57:boolean_isEmpty():size => --size
+AOIS_39:57:boolean_isEmpty():size => size++
+AOIS_40:57:boolean_isEmpty():size => size--
+AOIS_41:62:boolean_isFull():size => ++size
+AOIS_42:62:boolean_isFull():size => --size
+AOIS_43:62:boolean_isFull():size => size++
+AOIS_44:62:boolean_isFull():size => size--
+AOIS_45:62:boolean_isFull():capacity => ++capacity
+AOIS_46:62:boolean_isFull():capacity => --capacity
+AOIS_47:62:boolean_isFull():capacity => capacity++
+AOIS_48:62:boolean_isFull():capacity => capacity--
+AOIS_49:68:java.lang.String_toString():i => ++i
+AOIS_50:68:java.lang.String_toString():i => --i
+AOIS_51:68:java.lang.String_toString():i => i++
+AOIS_52:68:java.lang.String_toString():i => i--
+AOIS_53:68:java.lang.String_toString():size => ++size
+AOIS_54:68:java.lang.String_toString():size => --size
+AOIS_55:68:java.lang.String_toString():size => size++
+AOIS_56:68:java.lang.String_toString():size => size--
+AOIS_57:69:java.lang.String_toString():front => ++front
+AOIS_58:69:java.lang.String_toString():front => --front
+AOIS_59:69:java.lang.String_toString():front => front++
+AOIS_60:69:java.lang.String_toString():front => front--
+AOIS_61:69:java.lang.String_toString():i => ++i
+AOIS_62:69:java.lang.String_toString():i => --i
+AOIS_63:69:java.lang.String_toString():i => i++
+AOIS_64:69:java.lang.String_toString():i => i--
+AOIS_65:69:java.lang.String_toString():capacity => capacity++
+AOIS_66:69:java.lang.String_toString():capacity => capacity--
+AOIS_67:70:java.lang.String_toString():i => ++i
+AOIS_68:70:java.lang.String_toString():i => --i
+AOIS_69:70:java.lang.String_toString():i => i++
+AOIS_70:70:java.lang.String_toString():i => i--
+AOIS_71:70:java.lang.String_toString():size => ++size
+AOIS_72:70:java.lang.String_toString():size => --size
+AOIS_73:70:java.lang.String_toString():size => size++
+AOIS_74:70:java.lang.String_toString():size => size--
+ROR_1:28:void_enqueue(java.lang.Object): o == null  =>   o != null
+ROR_2:31:void_enqueue(java.lang.Object): size == capacity  =>   size > capacity
+ROR_3:31:void_enqueue(java.lang.Object): size == capacity  =>   size >= capacity
+ROR_4:31:void_enqueue(java.lang.Object): size == capacity  =>   size < capacity
+ROR_5:31:void_enqueue(java.lang.Object): size == capacity  =>   size <= capacity
+ROR_6:31:void_enqueue(java.lang.Object): size == capacity  =>   size != capacity
+ROR_7:44:java.lang.Object_dequeue(): size == 0  =>   size > 0
+ROR_8:44:java.lang.Object_dequeue(): size == 0  =>   size >= 0
+ROR_9:44:java.lang.Object_dequeue(): size == 0  =>   size < 0
+ROR_10:44:java.lang.Object_dequeue(): size == 0  =>   size <= 0
+ROR_11:44:java.lang.Object_dequeue(): size == 0  =>   size != 0
+ROR_12:57:boolean_isEmpty(): size == 0  =>   size > 0
+ROR_13:57:boolean_isEmpty(): size == 0  =>   size >= 0
+ROR_14:57:boolean_isEmpty(): size == 0  =>   size < 0
+ROR_15:57:boolean_isEmpty(): size == 0  =>   size <= 0
+ROR_16:57:boolean_isEmpty(): size == 0  =>   size != 0
+ROR_17:62:boolean_isFull(): size == capacity  =>   size > capacity
+ROR_18:62:boolean_isFull(): size == capacity  =>   size >= capacity
+ROR_19:62:boolean_isFull(): size == capacity  =>   size < capacity
+ROR_20:62:boolean_isFull(): size == capacity  =>   size <= capacity
+ROR_21:62:boolean_isFull(): size == capacity  =>   size != capacity
+COI_1:28:void_enqueue(java.lang.Object): o == null  =>  !(o == null)
+COI_2:31:void_enqueue(java.lang.Object): size == capacity  =>  !(size == capacity)
+COI_3:44:java.lang.Object_dequeue(): size == 0  =>  !(size == 0)
+COI_4:57:boolean_isEmpty(): size == 0  =>  !(size == 0)
+COI_5:62:boolean_isFull(): size == capacity  =>  !(size == capacity)
+COI_6:68:java.lang.String_toString(): i < size  =>  !(i < size)
+COI_7:70:java.lang.String_toString(): i < size - 1  =>  !(i < size - 1)
+LOI_1:19:Queue():capacity => ~capacity
+LOI_2:31:void_enqueue(java.lang.Object):size => ~size
+LOI_3:31:void_enqueue(java.lang.Object):capacity => ~capacity
+LOI_4:34:void_enqueue(java.lang.Object):size => ~size
+LOI_5:35:void_enqueue(java.lang.Object):back => ~back
+LOI_6:36:void_enqueue(java.lang.Object):back => ~back
+LOI_7:36:void_enqueue(java.lang.Object):capacity => ~capacity
+LOI_8:44:java.lang.Object_dequeue():size => ~size
+LOI_9:47:java.lang.Object_dequeue():size => ~size
+LOI_10:48:java.lang.Object_dequeue():front => ~front
+LOI_11:48:java.lang.Object_dequeue():capacity => ~capacity
+LOI_12:49:java.lang.Object_dequeue():front => ~front
+LOI_13:50:java.lang.Object_dequeue():front => ~front
+LOI_14:50:java.lang.Object_dequeue():capacity => ~capacity
+LOI_15:57:boolean_isEmpty():size => ~size
+LOI_16:62:boolean_isFull():size => ~size
+LOI_17:62:boolean_isFull():capacity => ~capacity
+LOI_18:68:java.lang.String_toString():i => ~i
+LOI_19:68:java.lang.String_toString():size => ~size
+LOI_20:68:java.lang.String_toString():i => ~i
+LOI_21:69:java.lang.String_toString():front => ~front
+LOI_22:69:java.lang.String_toString():i => ~i
+LOI_23:69:java.lang.String_toString():capacity => ~capacity
+LOI_24:70:java.lang.String_toString():i => ~i
+LOI_25:70:java.lang.String_toString():size => ~size
+ASRS_1:69:java.lang.String_toString():result += elements[(front + i) % capacity].toString() => result /= elements[(front + i) % capacity].toString()
+ASRS_2:69:java.lang.String_toString():result += elements[(front + i) % capacity].toString() => result *= elements[(front + i) % capacity].toString()
+ASRS_3:69:java.lang.String_toString():result += elements[(front + i) % capacity].toString() => result -= elements[(front + i) % capacity].toString()
+ASRS_4:69:java.lang.String_toString():result += elements[(front + i) % capacity].toString() => result %= elements[(front + i) % capacity].toString()
+ASRS_5:71:java.lang.String_toString():result += ", " => result /= ", "
+ASRS_6:71:java.lang.String_toString():result += ", " => result *= ", "
+ASRS_7:71:java.lang.String_toString():result += ", " => result -= ", "
+ASRS_8:71:java.lang.String_toString():result += ", " => result %= ", "
+ASRS_9:74:java.lang.String_toString():result += "]" => result /= "]"
+ASRS_10:74:java.lang.String_toString():result += "]" => result *= "]"
+ASRS_11:74:java.lang.String_toString():result += "]" => result -= "]"
+ASRS_12:74:java.lang.String_toString():result += "]" => result %= "]"

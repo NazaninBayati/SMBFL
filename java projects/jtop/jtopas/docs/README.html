@@ -1,0 +1,654 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>JTopas - Java tokenizer and parser tools</title>
+    <meta name="author" content="Heiko Blau">
+    <meta name="created" content="20010803;11300000">
+    <meta name="classification" content="Software: Java development">
+    <meta name="description" content="a small Java library for tokenizing and parsing text, e.g. source code">
+    <meta name="keywords" content="token, tokenizer, parser">
+
+    <link rel=stylesheet type="text/css" href="www/css/basics.css">
+  </head>
+
+  <body bgcolor="#FFF8DC" width=500>
+    <table width="600" border="0">
+      <tbody>
+
+	<tr>
+	  <td>
+	    <h1><font color="#B22222">J</font><font color="#006400">T</font><font color="#228B22"></font><font color="#FF8C00">opas</font> - Java tokenizer and parser tools</h1>
+	    <p><b>Version 0.3</b></p>
+	    <hr align="left">
+	    <h2 class="C_H2">Contents:</h2>
+	    <ol>
+	      <li class="C_ListNormal"><a href="#what_is_this">What is this?</a></li>
+	      <li class="C_ListNormal"><a href="#tokenizer">The generic tokenizer</a></li>
+	      <li class="C_ListNormal"><a href="#plugin">The plugin tokenizer</a></li>
+	      <li class="C_ListNormal"><a href="#exception_stack">Using exception stacks</a></li>
+	      <li class="C_ListNormal"><a href="#structure">Directories and Java package structure</a></li>
+	      <li class="C_ListNormal"><a href="#testing">Configuring JUnit tests</a></li>
+	      <li class="C_ListNormal"><a href="#environment">Environment</a></li>
+	      <li class="C_ListNormal"><a href="#install">Installation</a></li>
+	      <li class="C_ListNormal"><a href="#building">Building with Ant</a></li>
+	    </ol>
+	  </td>
+	</tr>
+
+	<tr>
+	  <td valign="middle" height="50">
+	    <hr align="left">
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+
+	    <!-- What is this? -->
+	    <h2><a name="what_is_this">What is this?</a></h2>
+	    <p class="C_Normal">
+	      As the title indicates, this is software written in <a class="C_RefOthers" href="http://java.sun.com">Java</a> and designed for being used in Java applications, libraries and other Java environments. In this version, the following features are provided:</p>
+	    <ul>
+	      <li class="C_ListNormal">a <a class="C_RefOwn" href="#tokenizer">generic, multi-purpose tokenizer</a> for "readable" text (source code, HTML, XML, ASCII text ...) featuring comment, keyword and special sequence support,</li>
+	      <li class="C_ListNormal">an <a class="C_RefOwn" href="#exception_stack">interface for exception stacks</a> (nested exceptions, as already known from <code>java.sql.SQLException</code> and <code>javax.mail.MessagingException)</code>.</li>
+	    </ul>
+	    <p class="C_Normal">This list will be frequently extended by new features, implementations of standard Java API's, and, last but not least, extensions to existing features.</p>
+	    <p class="C_Normal">Currently, JTopas consists of:</p>
+	    <ul class="C_Nomal">
+	      <li class="C_ListNormal">the Java archive <b><code>jtopas.jar</code></b> with interfaces and classes for Java programs that like to use JTopas,</li>
+	      <li class="C_ListNormal">the Java archive <b><code>jtopas-jt.jar</code></b> containing some <a class="C_RefOthers" href="http://junit.org">JUnit</a> tests for those who like to check the functionality of the <code>jtopas.jar</code>,</li>
+	      <li class="C_ListNormal">the <a class="C_RefOwn" href="build/doc/javadoc/index.html">documentation</a> of the interfaces and classes in the <code>jtopas.jar</code>, generated with the <b><i>javadoc</i></b> tool of the <a class="C_RefOthers" href="http://java.sun.com">Java Development Kit</a> (JDK),</li>
+	      <li class="C_ListNormal">the contents of our <a class="C_RefOwn" href="www/index.html">project web site</a>,</li>
+	      <li class="C_ListNormal">a build file <a class="C_RefCode" href="build.xml"><code>build.xml</code></a> for the <b><i>ant</i></b> utility of the <a class="C_RefOthers" href="http://jakarta.apache.org">Apache Jakarta Project</a> and</li>
+	      <li class="C_ListNormal">various license files (<a class="C_RefCode" href="COPYING">COPYING</a>, <a class="C_RefCode" href="GNU-GPL.txt">GNU-GPL.txt</a>, <a class="C_RefCode" href="GNU-LGPL.txt">GNU-LGPL.txt</a>), a changelog (<a class="C_RefCode" href="CHANGES">CHANGES</a>) and this README.</li>
+	    </ul>
+	    <p class="C_Normal"><b>NOTE:</b> The java package root is "de.susebox" according to our registered internet domain, <strong>not</strong> jtopas or similar.</p>
+	  </td>
+	</tr>
+	    
+	<tr>
+	  <td valign="middle" height="50">
+	    <hr align="left">
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+
+	    <!-- The generic tokenizer -->
+	    <h2><a name="tokenizer">The generic tokenizer</a></h2>
+	    <p class="C_Normal">If You need to parse more sophisticated texts than can easily be handled using <b><code>java.util.StringTokenizer</code></b> or <b><code>java.io.StreamTokenizer</code></b>, and You dont want to use JavaCC or JTB or other parser generators, our generic, multi-purpose tokenizer may be just right. It has more abilities to parse source code, HTML etc. than the mentioned JDK classes without the complexity and power of parser generators. In fact, with a more or less simple wrapper it can be used as a tokenizer for JavaCC and JTB, if the generated tokenizers do not fit for some reason.</p>
+	    
+	    <p class="C_Normal">In the following example, we extract the contents from a HTML file to produce a roughly formatted text file. A more sophisticated version can be found in one of the JUnit tests (see <a class="C_RefCode"  href="junit/de/susebox/java/util/TestInputStreamTokenizer.java"><code>junit/de/susebox/java/util/TestInputStreamTokenizer.java</code></a>, Method <b><code>testContentsFormatting</code></b>):<br>
+	    <blockquote>
+	      <pre>
+<font color="#8b0000">// Imports</font>
+<b>import</b> java.io.FileInputStream;
+<b>import</b> java.io.InputStreamReader;
+
+<b>import</b> de.susebox.java.util.Token;
+<b>import</b> de.susebox.java.util.Tokenizer;
+<b>import</b> de.susebox.java.util.InputStreamTokenizer;
+<b>import</b> de.susebox.java.util.TokenizerProperty;
+
+<font color="#8b0000">// class to hold main method</font>
+<b>public class</b> ContentsExtractor {
+
+  <font color="#8b0000">// Main method. Supply a HTML file name as argument</font>
+  <b>public static</b> void main(String[] args) {
+    FileInputStream   stream    = new FileInputStream(args[0]);
+    InputStreamReader reader    = new InputStreamReader(stream);
+    Tokenizer         tokenizer = new InputStreamTokenizer(reader);
+    Token             token;
+    int               len;
+    int               caseFlags; 
+
+    <font color="#8b0000">// setup the tokenizer</font>
+    tokenizer.setParseFlags( Tokenizer.F_NO_CASE 
+                           | Tokenizer.F_TOKEN_POS_ONLY 
+                           | Tokenizer.F_RETURN_WHITESPACES);
+    caseFlags = tokenizer.getParseFlags() 
+                &amp; ~Tokenizer.F_NO_CASE;
+    tokenizer.setSeparators(null);
+    tokenizer.addBlockComment(<font color="#8b0000">"&lt;"</font>, <font color="#8b0000">"&gt;"</font>);
+    tokenizer.addBlockComment(<font color="#8b0000">"&lt;HEAD&gt;"</font>, <font color="#8b0000">"&lt;/HEAD&gt;"</font>);
+    tokenizer.addBlockComment(<font color="#8b0000">"&lt;!--"</font>, <font color="#8b0000">"--&gt;"</font>);
+    tokenizer.addSpecialSequence(<font color="#8b0000">"&amp;lt;"</font>, <font color="#8b0000">"&lt;"</font>);
+    tokenizer.addSpecialSequence(<font color="#8b0000">"&amp;gt;"</font>, <font color="#8b0000">"&gt;"</font>);                   
+    tokenizer.addSpecialSequence(<font color="#8b0000">"&amp;auml;"</font>, <font color="#8b0000">"&auml;"</font>, caseFlags);
+    tokenizer.addSpecialSequence(<font color="#8b0000">"&amp;Auml;"</font>, <font color="#8b0000">"&Auml;"</font>, caseFlags);
+    tokenizer.addSpecialSequence(<font color="#8b0000">"&amp;ouml;"</font>, <font color="#8b0000">"&ouml;"</font>, caseFlags);
+    tokenizer.addSpecialSequence(<font color="#8b0000">"&amp;Ouml;"</font>, <font color="#8b0000">"&Ouml;"</font>, caseFlags);
+    tokenizer.addSpecialSequence(<font color="#8b0000">"&amp;uuml;"</font>, <font color="#8b0000">"&uuml;"</font>, caseFlags);
+    tokenizer.addSpecialSequence(<font color="#8b0000">"&amp;Uuml;"</font>, <font color="#8b0000">"&Uuml;"</font>, caseFlags);
+    tokenizer.addSpecialSequence(<font color="#8b0000">"&lt;b&gt;"</font>, <font color="#8b0000">""</font>);
+    tokenizer.addSpecialSequence(<font color="#8b0000">"&lt;/b&gt;"</font>, <font color="#8b0000">""</font>);
+    tokenizer.addSpecialSequence(<font color="#8b0000">"&lt;i&gt;"</font>, <font color="#8b0000">""</font>);
+    tokenizer.addSpecialSequence(<font color="#8b0000">"&lt;/i&gt;"</font>, <font color="#8b0000">""</font>);
+    tokenizer.addSpecialSequence(<font color="#8b0000">"&lt;code&gt;"</font>, <font color="#8b0000">""</font>);
+    tokenizer.addSpecialSequence(<font color="#8b0000">"&lt;/code&gt;"</font>, <font color="#8b0000">""</font>);
+
+    <font color="#8b0000">// tokenize the file and print basically
+    // formatted context to stdout</font>
+    len = 0;
+    <b>while</b> (tokenizer.hasMoreToken()) {
+      token = tokenizer.nextToken();
+      <b>switch</b> (token.getType()) {
+      <b>case</b> Token.NORMAL:
+        System.out.print(tokenizer.current());
+        len += token.getLength();
+        break;
+      <b>case</b> Token.SPECIAL_SEQUENCE:
+        System.out.print((String)token.getCompanion());
+        <b>break</b>;
+      <b>case</b> Token.BLOCK_COMMENT:
+        <b>if</b> (len > 0) {
+          System.out.println();
+          len = 0;
+        }
+        <b>break</b>;
+      <b>case</b> Token.WHITESPACE:
+        <b>if</b> (len > 75) {
+          System.out.println();
+          len = 0;
+        } else if (len > 0) {
+          System.out.print(' ');
+          len++;
+        }
+        <b>break</b>;
+      }
+    }
+  }
+}
+	      </pre>
+	    </blockquote>
+	  </p>
+	    <p class="C_Normal">The generic tokenizer supports the following features, some of them can be found in the example above:</p>
+	    <ul>
+	      <li class="C_ListNormal">support for multible line comments or syntactical units that can be handled like line comments (<b><code>addLineComment</code></b> methods),</li>
+	      <li class="C_ListNormal">support for multible block comments or syntactical units that can be handled like block comments (<b><code>addBlockComment</code></b> methods),</li>
+	      <li class="C_ListNormal">support for multible strings or similar syntactical units, for instance characters (<b><code>addString</code></b> methods),</li>
+	      <li class="C_ListNormal">support for special sequences (<b><code>addSpecialSequence</code></b> methods,</li>
+	      <li class="C_ListNormal">the usual simple whitespaces and separators (<b><code>setWhitespaces</code></b> and <b><code>setSeparators</code></b>),
+	      <li class="C_ListNormal">support for keywords (<b><code>addKeyword</code></b> methods),</li>
+	    </ul>
+	    <p class="C_Normal">More examples can be found in the various <a href="#testing">JUnit tests</a> for the <code>Tokenizer</code>.</p>
+	    <p class="C_Normal">The basic behaviour of the tokenizer can be configured with various flags, that may control the parsing process as a whole, but also the handling of single comments, keywords or special sequences. This is shown in the example above: HTML is generally not case-sensitive, but some special characters are, like &amp;auml; (&auml;) and &amp;Auml; (&Auml;). Currently, the tokenizer recognizes the following parse flags:</p>
+	    <ul>
+	      <li class="C_ListNormal"><b><code>F_NO_CASE</code></b>: Comparison is done ignoring the uppercase / lowercase differences between letters. 'A' is equal 'a'. Programming languages like Pasqal, ORACLE's PL/SQL and Ada fall in that category. On the other hand, Java, C and C++ are case-sensitive.</li>
+	      <li class="C_ListNormal"><b><code>F_KEYWORDS_NO_CASE</code></b> and <b><code>F_KEYWORDS_CASE</code></b>: If the general compare operations are done case-sensitive, but keywords are not case-sensitive, or vice versa, these flags cover such situations.</li>
+	      <li class="C_ListNormal"><b><code>F_RETURN_WHITESPACES</code></b>:In many cases, parsers are not interested in whitespaces. If in certain circumstances, whitespaces and comments should be returned as tokens to the caller, use this flag.
+	      </li>
+	      <li class="C_ListNormal"><b><code>F_TOKEN_POS_ONLY</code></b>: For perfomance and memory reasons, this flag is used to avoid copying found token images (the string representing the token) to the <b><code>Token</code></b> variable, returned by the parse methods <b><code>nextToken</code></b>, <b><code>next</code></b> and others.</li>
+	      <li class="C_ListNormal"><b><code>F_KEEP_DATA</code></b>: Set this flag to let the tokenizer buffer all data. Normally, a tokenizer keeps only the amount of data that fits in an internal buffer. This flag ensures, that the internal buffer is dynamically enlarged to store all data.</li>
+	      <li class="C_ListNormal"><b><code>F_COUNT_LINES</code></b>: Tells the tokenizer to count lines and columns. That is not really a performance boost ;-).</li>
+	      <li class="C_ListNormal"><b><code>F_ALLOW_NESTED_COMMENTS</code></b>: Nested block comments are usually not allowed. This flag changes the default behaviour.</li>
+	      <li class="C_ListNormal"><b><code>F_PARSE_NUMBERS</code></b>: With this flag, the tokenizer tries to identify numbers (not yet implemented).</li>
+	    </ul>
+	    <p class="C_Normal">The mentioned flags can also be set for a single comment, keyword or special sequence. Currently, only the <b><code>F_NO_CASE</code></b> (or its absence) takes effect. But this is the most important.</p>
+	    <p class="C_Normal">The more advanced <b><code>add...</code></b> methods have a parameter, called the <b></i>companion</i></b>. This is any additional information, the user wants to be associated with a certain keyword, special sequence, comment or string. In the example above, the HTML codes for the german <i>Umlaute</i> &auml; etc. have associated the actual german letter to them.</p>
+	    <p class="C_Normal">If a specific flag can be set or cleared while the parsing process is under way, depends highly on the implementation. Our basic version supports dynamic change for the following flags:</p>
+	    <ul>
+	      <li class="C_ListNormal"><b><code>F_RETURN_WHITESPACES</code></b></li>
+	      <li class="C_ListNormal"><b><code>F_TOKEN_POS_ONLY</code></b></li>
+	      <li class="C_ListNormal"><b><code>F_COUNT_LINES</code></b> (clearing the flag is save, setting it works correctly except that line 0, column 0 is the position, where the flag was set).</li>
+	    </ul>
+	    <p class="C_Normal">The results of the Tokenizers parse operations a delivered as objects of class <a class="C_RefCode" href="src/de/susebox/util/Token.java"><code>src/de/susebox/util/Token.java</code></a>. Depending on some of the control flags set for the <code>Tokenizer</code>, some or all properties of the <code>Token</code> object are filled. Without the flag <code>F_COUNT_LINES</code> the result values of the methods <code>getStartLine</code>, <code>getStartColumn</code> etc. are useless. The flag <code>F_TOKEN_POS_ONLY</code> lets <code>getToken</code> return <code>null</code>.</p>
+	    
+	    <h3>Java classes and documentation:</h3>
+	    <table border="0" width="100%">
+		<tr>
+		  <td width="500">
+		    <table border="0" align="left">
+		      <thead>
+			<tr>
+			  <th align="left" width="200"><p><b>Class / Interface</b></p></th>
+			  <th align="left" width="50"><p><b>Doc.</b></p></th>
+			  <th align="left" width="250"><p><b>Remarks</b></p></th>
+			</tr>
+		      </thead>
+		      <tbody>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/java/util/Tokenizer.java"><code>Tokenizer</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/java/util/Tokenizer.html">here</a></p></td>
+			  <td valign="top"><p>The interface with parsing operations, getter and setter methods for properties and raw data access</p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/java/util/AbstractTokenizer.java"><code>AbstractTokenizer</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/java/util/AbstractTokenizer.html">here</a></p></td>
+			  <td valign="top"><p>Implementation of the <code>Tokenizer</code>interface. Extensions need to implement an <code>InputStream</code>-like <code>read</code> method.</p></td>
+			</tr>
+		<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/java/util/InputStreamTokenizer.java"><code>InputStreamTokenizer</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/java/util/InputStreamTokenizer.html">here</a></p></td>
+			  <td valign="top"><p>Derived from <code>AbstractTokenizer</code>. Reads data from an <code>InputStream</code>.</p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/java/util/Token.java"><code>Token</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/java/util/Token.html">here</a></p></td>
+			  <td valign="top"><p>Token description (image, type, positions and length). Objects of this class are returned by the parse methods of <code>Tokenizer</code>.</p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/java/util/TokenizerProperty.java"><code>TokenizerProperty</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/java/util/TokenizerProperty.html">here</a></p></td>
+			  <td valign="top"><p>Description of comments, keywords, special sequences and strings. Objects of this class are returned by the various <code>Enumeration</code> methods of <code>Tokenizer</code>.</p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/java/util/TokenizerException.java"><code>TokenizerException</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/java/util/TokenizerException.html">here</a></p></td>
+			  <td valign="top"><p>Common exception thrown by the methods of <code>Tokenizer</code>. Supports the <a href="#exception_stack"><code>ExceptionList</code></a> interface</p></td>
+			</tr>
+		      </tbody>
+		    </table>
+		  </td>
+		  <td>&nbsp;</td>
+		</tr>
+	    </table>
+	    
+	    <h3>Planned modules and expected improvements:</h3>
+	    <p class="C_Normal">We are planning to supply class(es) for more sophisticated parse operations like finding the closing sequence for a given opening one (for instance, the matching '}' for a found '{' in Java), parsing various number and date formats etc.</p>
+	    <p class="C_Normal">Currently, there are only the basic strategies to improve speed implemented (Use of ordered arrays for binary search, hash tables). Also, there is not much consideration regarding memory usage.</p>
+	    <p class="C_Normal">But most important is feedback :-)</p>
+	  </td>
+	</tr>
+	    
+	    
+	<tr>
+	  <td valign="middle" height="50">
+	    <hr align="left">
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+
+	    <!-- The plugin tokenizer -->
+	    <h2><a name="plugin">The plugin tokenizer</a></h2>
+	    <p class="C_Normal">Beside the easy-to-use approach of the generic tokenizer described above, there is also the so-called plugin tokenizer. It is an implementation of the <a class="C_RefCode" href="src/de/susebox/java/util/Tokenizer.java">Tokenizer.java</a> interface, derived from the class <a class="C_RefCode" href="src/de/susebox/java/util/AbstractTokenizer.java">AbstractTokenizer.java</a>. It can be used as an alternative to the <a class="C_RefCode" href="src/de/susebox/java/util/InputStreamTokenizer.java">InputStreamTokenizer.java</a>.</p>
+	    <p class="C_Normal">The plugin tokenizer <b><i>may</i></b> be faster in various situations. This might especially be true for parsing XML or HTML tags and treating the real contents as block comments. But don't expect double speed, the generic tokenizer is not that slow ;-)<br>More important, it provides some means to deal with situations where the public methods of the generic tokenizer are not good / nice / convenient enough.</p>
+	    <p class="C_Normal">Here is an example:</p>
+
+	    <blockquote>
+	      <pre>
+<font color="#8b0000">// Imports</font>
+<b>import</b> java.io.FileInputStream;
+<b>import</b> java.io.InputStreamReader;
+<b>import</b> java.util.ArrayList;
+
+<b>import</b> de.susebox.java.util.Token;
+<b>import</b> de.susebox.java.util.Tokenizer;
+<b>import</b> de.susebox.java.util.TokenizerProperty;
+<b>import</b> de.susebox.jtopas.PluginTokenizer;
+<b>import</b> de.susebox.jtopas.InputStreamSource;
+<b>import</b> de.susebox.jtopas.SequenceHandler;
+<b>import</b> de.susebox.jtopas.SeparatorHandler;
+
+<font color="#8b0000">// class to hold main method</font>
+<b>public class</b> XMLTokenizer implements SequenceHandler, SeparatorHandler {
+  <font color="#8b0000">// class constants</font>
+  <b>private static final</b> Object START_TAG_COMP = <b>new</b> Object;
+  <b>private static final</b> Object END_TAG_COMP   = <b>new</b> Object;
+
+  <b>private static final</b> TokenizerProperty  STRING_PROP
+    = <b>new</b> TokenizerProperty(Token.STRING,           <b>new</b> String[] { "\"", "\"", "\\" }, <b>null</b> );
+
+  <b>private static final</b> TokenizerProperty  COMMENT_PROP
+    = <b>new</b> TokenizerProperty(Token.BLOCK_COMMENT,    <b>new</b> String[] { "&lt;!--", "--&gt;" }, <b>null</b> );
+
+  <b>private static final</b> TokenizerProperty  SPEC_COMMENT_PROP
+    = <b>new</b> TokenizerProperty(Token.SPECIAL_SEQUENCE, <b>new</b> String[] { "&lt;!" }, <b>null</b> );
+
+  <b>private static final</b> TokenizerProperty  END_TAG
+    = <b>new</b> TokenizerProperty(Token.SPECIAL_SEQUENCE, <b>new</b> String[] { "&lt;/" }, END_TAG_COMP );
+
+  <b>private static final</b> TokenizerProperty  START_TAG
+    = <b>new</b> TokenizerProperty(Token.SPECIAL_SEQUENCE, <b>new</b> String[] { "&lt;" }, START_TAG_COMP );
+
+  <b>private static final</b> TokenizerProperty  TAG_END
+    = <b>new</b> TokenizerProperty(Token.SPECIAL_SEQUENCE, <b>new</b> String[] { "&gt;" }, <b>null</b> );
+
+  <font color="#8b0000">// member variables</font>
+  <b>private</b> PluginTokenizer _myTokenizer = <b>null</b>;
+  <b>private</b> ArrayList       _tagList     = <b>new</b> ArrayList(1024);;
+
+  <font color="#8b0000">// Main method. Supply a XML file name as argument</font>
+  <b>public static</b> void main(String[] args) {
+    FileInputStream   stream    = new FileInputStream(args[0]);
+    InputStreamReader reader    = new InputStreamReader(stream);
+    PluginTokenizer   tokenizer = new PluginTokenizer();
+
+    <font color="#8b0000">// setup the tokenizer</font>
+    tokenizer.setSource(new InputStreamSource(reader));
+    tokenizer.setParseFlags( Tokenizer.F_TOKEN_POS_ONLY 
+                           | Tokenizer.F_RETURN_WHITESPACES);
+    tokenizer.setSequenceHandler(this);
+    tokenizer.setSeparatorHandler(this);
+
+    <font color="#8b0000">// get all the XML tags</font>
+    <b>while</b> (tokenizer.hasMoreToken()) {
+      Token token = tokenizer.nextToken();
+      
+      <b>if</b> (token.getType() == Token.SPECIAL_SEQUENCE) {
+        <b>if</b> (token.getCompanion() == START_TAG_COMP) {
+          token = tokenizer.nextToken();
+          _tagList.add(new TagInfo(tokenizer.current(), START_TAG_COMP));
+        } <b>else if</b> (token.getCompanion() == END_TAG_COMP) {
+          token = tokenizer.nextToken();
+          _tagList.add(new TagInfo(tokenizer.current(), END_TAG_COMP));
+        }
+      }          
+    }
+  }
+
+  <font color="#8b0000">// Plugin interface method</font>
+  <b>public void</b> setTokenizer(PluginTokenizer tokenizer) {
+    _myTokenizer = tokenizer;
+  }
+
+  <font color="#8b0000">// SeparatorHandler interface method</font>
+  <b>public boolean</b> isSeparator(<b>char</b> testChar) {
+    <b>return</b> testChar == '=';
+  }
+  
+  <font color="#8b0000">// get the maximum possible length for a special sequence</font>
+  <b>public int</b> getSequenceMaxLength() {
+    <b>return</b> 4;   <font color="#8b0000">// length of "&lt;!--"</font>
+  }
+  
+  <font color="#8b0000">// The sequence handler</font>
+  <b>public</b> TokenizerProperty isSequenceCommentOrString(<b>int</b> startAt, <b>int</b> maxChars) {
+    TokenizerProperty prop = null;
+    
+    <b>switch</b> (_myTokenizer.getCharUnchecked(startingAtPos)) {
+    <b>case</b> '"':
+      <font color="#8b0000">// strings are attribute values in XML</font>
+      prop = STRING_PROP;
+      <b>break</b>;
+
+    <b>case</b> '&lt;':
+      <font color="#8b0000">// tag opening</font>
+      <b>switch</b> (_tokenizer.getCharUnchecked(startingAtPos + 1)) {
+      <b>case</b> '!':
+        if (   _myTokenizer.getCharUnchecked(startingAtPos + 2) == '-' 
+            && _myTokenizer.getCharUnchecked(startingAtPos + 3) == '-') {
+          prop = COMMENT_PROP;
+        } <b>else</b> {
+          prop = SPEC_COMMENT_PROP;
+        }
+        <b>break</b>;
+      <b>case</b> '/':
+        prop = END_TAG;
+        <b>break</b>;
+      <b>default</b>:
+        prop = START_TAG;
+        <b>break</b>;
+      }
+      <b>break</b>;
+      
+    <b>case</b> '&gt;':
+      <font color="#8b0000">// tag closing</font>
+      prop = TAG_END;
+      <b>break</b>;
+    }
+  }
+}
+	      </pre>
+	    </blockquote>
+	    <p class="C_Normal">Beside the handler methods, there is one big difference to the generic tokenizer. No comments, special sequences and separators are added to the plugin tokenizer. While it would have been possible to do so, the tokenizer wouldn't have heeded these properties, since the decision about what is a special sequence and what not, is made by the handler <code>isSequenceCommentOrString</code>.</p>
+
+	    <h3>Java classes and documentation:</h3>
+	    <table border="0" width="100%">
+		<tr>
+		  <td width="500">
+		    <table border="0" align="left">
+		      <thead>
+			<tr>
+			  <th align="left" width="200"><p><b>Class / Interface</b></p></th>
+			  <th align="left" width="50"><p><b>Doc.</b></p></th>
+			  <th align="left" width="250"><p><b>Remarks</b></p></th>
+			</tr>
+		      </thead>
+		      <tbody>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/jtopas/PluginTokenizer.java"><code>PluginTokenizer</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/jtopas/PluginTokenizer.html">here</a></p></td>
+			  <td valign="top"><p>This class extends the <a class="C_RefCode" href="src/de/susebox/java/util/AbstractTokenizer.java">AbstractTokenizer.java</a>. It is possible to "plug in" various handlers like a whitespace or separator handler.</p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/jtopas/Plugin.java"><code>Plugin</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/jtopas/Plugin.html">here</a></p></td>
+			  <td valign="top"><p>Root interface for all plug-ins.</p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/jtopas/TokenizerSource.java"><code>TokenizerSource</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/jtopas/TokenizerSource.html">here</a></p></td>
+			  <td valign="top"><p>Interface for a data source plugin. Such plugins provide data to the tokenizer from whatever source is desired.</p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/jtopas/InputStreamSource.java"><code>InputStreamSource</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/jtopas/InputStreamSource.html">here</a></p></td>
+			  <td valign="top"><p>Simple implementation of the <code>TokenizerSource</code> interface, based on a <b><code>java.io.Reader</code></b>.</p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/jtopas/SeparatorHandler.java"><code>SeparatorHandler</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/jtopas/SeparatorHandler.html">here</a></p></td>
+			  <td valign="top"><p>Interface for handling simple separators. Separators are single characters like brackerts, colons, slashes or whatever has a similar meaning.</p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/jtopas/SequenceHandler.java"><code>SequenceHandler</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/jtopas/SequenceHandler.html">here</a></p></td>
+			  <td valign="top"><p>Interface for processing special sequences like the <code>!=</code>, <code>&amp;&amp;</code> or <code>+=</code> operators of C and Java.</p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/jtopas/WhitespaceHandler.java"><code>WhitespaceHandler</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/jtopas/WhitespaceHandler.html">here</a></p></td>
+			  <td valign="top"><p>Interface for processing whitespaces <b><i>excluding</i></b> line and block comments.</p></td>
+			</tr>
+		      </tbody>
+		    </table>
+		  </td>
+		  <td>&nbsp;</td>
+		</tr>
+	    </table>
+
+	    <h3>Planned modules and expected improvements:</h3>
+	    <p class="C_Normal">Currently, the <code>PluginTokenizer</code> provides only some of the most obvious plug-in points. More read handlers like the <code>readWhitespaces</code> could be usefull, especially for comments and strings.</p>
+	  </td>
+	</tr>
+
+	<tr>
+	  <td valign="middle" height="50">
+	    <hr align="left">
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+
+	    <!-- Using exception stack -->
+	    <h2><a name="exception_stack">Using exception stacks</a></h2>
+	    <p class="C_Normal">In order to see, whats going wrong in one's Java application, <code><b>ex.printStackTrace()</b></code> is often perfectly sufficient. As long as You feel comfortable with this, don't bother about exception stacks ;-)</p>
+	    <p class="C_Normal">But the following problems occur while working with exceptions:</p>
+	    <ul>
+	      <li class="C_ListNormal">A method throws an exception, for instance containing the message "file not found". The calling method catches this exception to add its own exception, for instance "could not read properties". With standard Java exceptions, there is no elegant way to keep the first exception while throwing the second one.</li>
+	      <li class="C_ListNormal">An interface requires that only <code>IOException</code> are thrown by a specific method. One's implementation, however, may throw <code>SQLException</code> by calling some JDBC methods. Usually, one would take the message of the <code>SQLException</code> only to put it into a newly created <code>IOException</code>. This is not really a nice solution.</li>
+	      <li class="C_ListNormal">There are more complex exception situations, for instance a set of parameters where one may conflict with another or some of them may be invalid. A good example are <code>MessagingException</code>'s in the Java Mail API, there quite a lot of things may go wrong (no mail server, no network ...) because of a lot of other things (invalid mail addresses, unknown attachments ...). How can one bundle a variety of problems into one exception to be thrown?</li>
+	    </ul>
+	    <p class="C_Normal">We use the interface <a class="C_RefCode" href="src/de/susebox/java/lang/ExceptionList.java"><code>ExceptionList.java</code></a> to deal with these situations. It is a lightweight interface with only two methods:</p>
+	    <ul>
+	      <li class="C_ListNormal"><b><code>nextException</code></b>: This method returns the succeeding exception in an exception list. Seeing the exception list as a stack, the next exception is the one under the current in the stack order.</li>
+	      <li class="C_ListNormal"><b><code>isWrapperException</code></b>: Returns true, if the current exception only contains an inner exception. This is the usually the case in the situation explained in the second case above.</li>
+	    </ul>
+	    <p class="C_Normal">We use either exceptions derived from the standard JDK exceptions or our own ones. Both support the <b><code>ExceptionList</code></b> interface. Unfortunately, at least for the exception list aspect, Java doesn't support multiple inheritance. The implementation code for the <b><code>ExceptionList</code></b> interface must be written down for each derived exception class. We provide the expected implementation code in the interface (in block comments) to make coding easier.</p>
+	    <p class="C_Normal">Exception messages can be provided in the usual way by composing the message when constructing the exception. Another way is the usage of a format string and a array of parameters. The latter approach avoids the costly formatting when an exception is thrown (nobody knows, if the message is actually shown somewhere). Another aspect is the separation of language-depending format and the actual parameters.</p>
+	    <p class="C_Normal">Beside the methods of the <b><code>ExceptionList</code></b> interface, all our exceptions implement the <b><code>getMessage</code></b> method of the  <b><code>java.lang.Throwable</code></b> class. The first reason is to provide a message depending on the fact if an exception is a wrapper exception or not. The second reason is the use of the <b><code>java.text.MessageFormat</code></b> class to assemble messages from format strings and a parameter array.</p>
+	    
+	    <h3>Java classes and documentation:</h3>
+	    <table border="0" width="100%">
+		<tr>
+		  <td width="500">
+		    <table border="0" align="left">
+		      <thead>
+			<tr>
+			  <th align="left" width="200"><p><b>Class / Interface</b></p></th>
+			  <th align="left" width="50"><p><b>Doc.</b></p></th>
+			  <th align="left" width="250"><p><b>Remarks</b></p></th>
+			</tr>
+		      </thead>
+		      <tbody>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/java/lang/ExceptionList.java"><code>ExceptionList</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/java/lang/ExceptionList.html">here</a></p></td>
+			  <td valign="top"><p>The interface for nested and wrapped exceptions</p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/java/lang/ExtRuntimeException.java"><code>ExtRuntimeException</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/java/lang/ExtRuntimeException.html">here</a></p></td>
+			  <td valign="top"><p>Implementation of the <b><code>ExceptionList</code></b> interface for the JDK exception <b><code>java.lang.RuntimeException</code></b></td>
+			</tr>
+			<tr>
+			  <td colspan=3 valign="top"><p><a class="C_RefCode" href="src/de/susebox/java/lang/ExtIndexOutOfBoundsException.java"><code>ExtIndexOutOfBoundsException</code></a></p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p>&nbsp;</p>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/java/lang/ExtIndexOutOfBoundsException.html">here</a></p></td>
+			  <td valign="top"><p>Implementation of the <b><code>ExceptionList</code></b> interface for the JDK exception <b><code>java.lang.IndexOutOfBoundsException</code></b></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src/de/susebox/java/io/ExtIOException.java"><code>ExtIOException</code></a></p></td>
+			  <td valign="top"><p><a href="build/doc/javadoc/de/susebox/java/io/ExtIOException.html">here</a></p></td>
+			  <td valign="top"><p>Implementation of the <b><code>ExceptionList</code></b> interface for the JDK exception <b><code>java.io.IOException</code></b></td>
+			</tr>
+		      </tbody>
+		    </table>
+		  </td>
+		  <td>&nbsp;</td>
+		</tr>
+	    </table>
+	    
+	    <h3>Planned modules and expected improvements:</h3>
+	    <p class="C_Normal">There are a lot of JDK exceptions that haven't been derived so far. A growing list of such derivations should be included in new versions of JTopas.</p>
+	  </td>
+	</tr>
+	    
+	<tr>
+	  <td valign="middle" height="50">
+	    <hr align="left">
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    <h2><a name="structure">Directories and Java package structure</a></h2>
+	    <p class="C_Normal">After extracting files from the JTopas tar'ed and gzip'ed archive <a class="C_RefCode" href="jtopas-0.1.tar.gz">jtopas-0.1.tar.gz</a>, the following <a class="C_RefOwn" href=".">directories</a> can be found:</p>
+	    <table border="0" width="100%">
+		<tr>
+		  <td>
+		    <table border="0" align="left">
+		      <thead>
+			<tr>
+			  <th align="left" width="100"><p><b>Directory</b></p></th>
+			  <th align="left" width="400"><p><b>Contents</b></p></th>
+			</tr>
+		      </thead>
+		      <tbody>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="src"><code>src</code></a></p></td>
+			  <td valign="top"><p>contains the sources for the <code>jtopas.jar</code> java archive. In this folder You will find the usual directory layout for java packages.</p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="junit"><code>junit</code></a></p></td>
+			  <td valign="top"><p>contains various JUnit test cases and suites for the packages in <code>src</code>. You will find the usual directory layout for java packages in this folder, too.</p></td>
+			</tr>
+ 			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="etc"><code>etc</code></a></p></td>
+			  <td valign="top"><p>configuration files ... (empty, so far).</p></td>
+			</tr>
+ 			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="www"><code>www</code></a></p></td>
+			  <td valign="top"><p>the contents of the JTopas website <a class="C_RefOthers" href="http://jtopas.sourceforge.net">http://jtopas.sourceforge.net</a>.</p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="build"><code>build</code></a></p></td>
+			  <td valign="top"><p>This folder is filled by the ant build process, controlled by the ant "Makefile" <a class="C_RefCode" href="build.xml">build.xml</a>. It contains everything that can be made out of the sources: the archives <a class="C_RefCode" href="build/lib/jtopas.jar">jtopas.jar</a> and <a class="C_RefCode" href="build/lib/jtopas-jt.jar">jtopas-jt.jar</a>, the compiled classes, and the java documentation.</p></td>
+			</tr>
+			<tr>
+			  <td valign="top"><p><a class="C_RefCode" href="etc"><code>www</code></a></p></td>
+			  <td valign="top"><p>the contents of our project website <a class="C_RefOthers" href="http://jtopas.sourceforge.net">http://jtopas.sourceforge.net</a></p></td>
+			</tr>
+		      </tbody>
+		    </table>
+		  </td>
+		</tr>
+	    </table>
+	    <p class="C_Normal">The Java package structure follows the usual policy. The root for our package hierarchy is derived from our web domain: <b><code>de.susebox</code></b>. For application-independed interfaces and classes that are extended from or related to JDK (J2SE, J2EE) API's, we use the equivalent structure. If, for instance, we would implement a <b><code>java.io.InputStream</code></b>, it would appear in the package <b><code>de.susebox.java.io</code></b>.</p>
+	  </td>
+	</tr>
+	    
+	<tr>
+	  <td valign="middle" height="50">
+	    <hr align="left">
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    <h2><a name="testing">Configuring <a class="C_RefOthers" href="http://junit.org">JUnit</a> tests</a></h2>
+	    <p class="C_Normal">We use the popular JUnit framework for testing our classes. The tests are composed hierarchically by the (static) <b><code>suite</code></b> method of JUnit. The test class <a class="C_RefCode" href="junit/de/susebox/java/JavaTestSuite.java"><code>de.susebox.java.JavaTestSuite</code></a> assembles a suite of all subpackage test suites. Part of it is, for instance, <a class="C_RefCode" href="junit/de/susebox/java/util/UtilTestSuite.java"><code>de.susebox.java.util.UtilTestSuite</code></a>. The root test class is <a class="C_RefCode" href="junit/de/susebox/SuseboxTestSuite.java"><code>de.susebox.SuseboxTestSuite</code></a>.</p>
+	    <p class="C_Normal">While some test cases are typical unit tests as JUnit suggests, there are others, that can be configured using a configuration file. Currently, these configuration files contain entries that can be read by the <b><code>java.lang.Class.getResourceAsStream</code></b> method.</p>
+	    <p class="C_Normal">The configuration files contain several test data sets. Each set is a collection of properties defined in the test case class using the configuration file, followed by the number of the test data set:</p>
+	    <block><pre>
+  # first test set
+  Path1=README.html
+
+  # second test set
+  Path2=build.xml
+	      </pre></block>
+	    <p class="C_Normal">Line comments may be used as shown above. The property base names ("Path" in the example) are defined in the test case Java classes. You will find the declaration at the beginning of the class sources. See for instance <a class="C_RefCode" href="junit/de/susebox/java/util/TestInputStreamTokenizer.java"><code>TestInputStreamTokenizer.java</code></a>.</p>
+	  </td>
+	</tr>
+	<tr>
+	  <td valign="middle" height="50">
+	    <hr align="left">
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    <h2><a name="environment">Environment</a></h2>
+	    <p class="C_Normal">To compile, use and run sources and / or archives of JTopas, You need at least a Java runtime environment (JRE), that can be obtained - among others - from <a class="C_RefOthers" href="http://java.sun.com">Sun</a>. For debugging purposes or a look inside the JDK sources, the full JDK is a better choice. For Linux users: there should be at least one JDK in Your distribution.</p>
+	    <p class="C_Normal">Since Version 0.3 of JTopas, a Java 2 environment (at least JDK 1.2) is nessecary. Classes like <b><code>java.util.Vector</code></b>, <b><code>java.util.Hashtable</code></b> and especially <b><code>java.util.Enumeration</code></b> are abandoned in favour of <b><code>java.util.ArrayList</code></b>, <b><code>java.util.HashMap</code></b> and <b><code>java.util.Iterator</code></b>.</p>
+	    <p class="C_Normal">For development, we use the <a class="C_RefOthers" href="http://www.netbeans.org">Netbeans IDE</a> with JDK 1.3.1 on a <a class="C_RefOthers" href="http://www.suse.com">SuSE Linux 7.3</a>. The <a class="C_RefOthers" href="http://jakarta.apache.org">Jakarta Ant</a> build tool is used to compile, archive, javadoc and package the whole thing. <a class="C_RefOthers" href="http://www.cyclic.com">CVS</a> does the version control. There are some ant targets for CVS.</p>
+	  </td>
+	</tr>
+	    
+	<tr>
+	  <td valign="middle" height="50">
+	    <hr align="left">
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    <h2><a name="install">Installation</a></h2>
+	    <p class="C_Normal">Our development platform is Linux, therefore we provide the usual zipped tar archive <a class="C_RefCode" href="jtopas-0.1.tar.gz">jtopas-<i>version</i>.tar.gz</a>. The <i>version</i> tag has the form <b><code><i>major</i>.<i>minor</i></code></b>, for instance 0.1 or 149.73.</p>
+	    <p class="C_Normal">Installation is straightforward:</p>
+	    <p class="C_Shell">me@ours:&nbsp;&gt;&nbsp;mkdir &lt;<i>jtopas-dir</i>&gt;<br>me@ours:&nbsp;&gt;&nbsp;cd &lt;<i>jtopas-dir</i>&gt;<br>me@ours:&nbsp;&gt;&nbsp;tar xvzf jtopas-0.1.tar.gz</p>
+	    <p class="C_Normal">For the various Microsoft operating systems, programs like Winzip are able to extract the tgz-archive. With the Cygwin bash shell for Windows, one may install the archive like in Unix environment.</p>
+	    <hr align="left">
+	    <h2><a name="building">Building with <a class="C_RefOthers" href="http://jakarta.apache.org">Ant</a></a></h2>
+	    <p class="C_Normal">The Jakarta Ant tool uses a build file, written in an XML dialect, as an equivalent to the classical Makefile.</p> The default name is <code>build.xml</code> and such a file exists for JTopas (<a class="C_RefCode" href="build.xml">look here</a>). 
+	  </td>
+	</tr>
+	    
+	<tr>
+	  <td valign="middle" height="50">
+	    <hr align="left">
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    <a name="contact"><address>Contact: <a href="mailto:info@susebox.de">webmaster</a></address></a>
+<!-- Created: Sat Aug  4 12:22:46 CEST 2001 -->
+<!-- hhmts start -->
+Last modified: Mon Jan  7 19:37:28 CET 2002
+<!-- hhmts end -->
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+  </body>
+</html>

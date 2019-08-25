@@ -1,0 +1,31 @@
+AORB_1:21:boolean_isPalindrome(java.lang.String):s.length() - 1 => s.length() * 1
+AORB_2:21:boolean_isPalindrome(java.lang.String):s.length() - 1 => s.length() / 1
+AORB_3:21:boolean_isPalindrome(java.lang.String):s.length() - 1 => s.length() % 1
+AORB_4:21:boolean_isPalindrome(java.lang.String):s.length() - 1 => s.length() + 1
+AOIS_1:22:boolean_isPalindrome(java.lang.String):low => ++low
+AOIS_2:22:boolean_isPalindrome(java.lang.String):low => --low
+AOIS_3:22:boolean_isPalindrome(java.lang.String):low => low++
+AOIS_4:22:boolean_isPalindrome(java.lang.String):low => low--
+AOIS_5:22:boolean_isPalindrome(java.lang.String):high => ++high
+AOIS_6:22:boolean_isPalindrome(java.lang.String):high => --high
+AOIS_7:22:boolean_isPalindrome(java.lang.String):high => high++
+AOIS_8:22:boolean_isPalindrome(java.lang.String):high => high--
+AOIS_9:23:boolean_isPalindrome(java.lang.String):low => ++low
+AOIS_10:23:boolean_isPalindrome(java.lang.String):low => --low
+AOIS_11:23:boolean_isPalindrome(java.lang.String):low => low++
+AOIS_12:23:boolean_isPalindrome(java.lang.String):low => low--
+AOIS_13:23:boolean_isPalindrome(java.lang.String):high => ++high
+AOIS_14:23:boolean_isPalindrome(java.lang.String):high => --high
+AOIS_15:23:boolean_isPalindrome(java.lang.String):high => high++
+AOIS_16:23:boolean_isPalindrome(java.lang.String):high => high--
+ROR_1:23:boolean_isPalindrome(java.lang.String): s.charAt( low ) == s.charAt( high )  =>   s.charAt( low ) > s.charAt( high )
+ROR_2:23:boolean_isPalindrome(java.lang.String): s.charAt( low ) == s.charAt( high )  =>   s.charAt( low ) >= s.charAt( high )
+ROR_3:23:boolean_isPalindrome(java.lang.String): s.charAt( low ) == s.charAt( high )  =>   s.charAt( low ) < s.charAt( high )
+ROR_4:23:boolean_isPalindrome(java.lang.String): s.charAt( low ) == s.charAt( high )  =>   s.charAt( low ) <= s.charAt( high )
+ROR_5:23:boolean_isPalindrome(java.lang.String): s.charAt( low ) == s.charAt( high )  =>   s.charAt( low ) != s.charAt( high )
+COI_1:22:boolean_isPalindrome(java.lang.String): low < high  =>  !(low < high)
+COI_2:23:boolean_isPalindrome(java.lang.String): s.charAt( low ) == s.charAt( high )  =>  !(s.charAt( low ) == s.charAt( high ))
+LOI_1:22:boolean_isPalindrome(java.lang.String):low => ~low
+LOI_2:22:boolean_isPalindrome(java.lang.String):high => ~high
+LOI_3:23:boolean_isPalindrome(java.lang.String):low => ~low
+LOI_4:23:boolean_isPalindrome(java.lang.String):high => ~high

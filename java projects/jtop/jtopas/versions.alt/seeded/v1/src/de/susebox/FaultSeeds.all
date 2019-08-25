@@ -1,0 +1,10 @@
+FAULT_1 1 ExtIOException.cpp 
+FAULT_2 2 ExtIOException.cpp
+FAULT_3 3 ExtIOException.cpp
+FAULT_4 1 AbstractTokenizer.cpp 
+FAULT_5 2 AbstractTokenizer.cpp 
+FAULT_6 3 AbstractTokenizer.cpp
+FAULT_7 1 Token.cpp
+FAULT_8 1 Tokenizer.cpp
+FAULT_9 2 ExtIndexOutOfBoundsException.cpp
+FAULT_10 1 ExtIndexOutOfBoundsException.cpp

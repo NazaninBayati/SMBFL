@@ -1,0 +1,6 @@
+OAN_1:15:s.substring( 0, i ) => s.substring(0)
+OAN_2:15:s.substring( 0, i ) => s.substring(i)
+OAN_3:18:s.substring( 0, n ) => s.substring(0)
+OAN_4:18:s.substring( 0, n ) => s.substring(n)
+OAN_5:26:s.substring( i, N ) => s.substring(i)
+OAN_6:26:s.substring( i, N ) => s.substring(N)

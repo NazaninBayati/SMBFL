@@ -1,0 +1,36 @@
+Prior to the installation of jtopas program, you need to set the following
+variables and classpath: 
+ 
+    - experiment_root :  
+      Set environment variable experiment_root to point to the parent directory 
+      of the subject directory by typing "setenv experiment_root <path>"
+      For example, assume you have a subject directory "jtopas" and you 
+      locate it under /cs_machine/exp_group/experiments, then you would give 
+      the command:
+
+        setenv experiment_root /cs_machine/exp_group/experiments
+
+    - CLASSPATH : 
+
+	${experiment_root}/jtopas/source:
+	$experiment_root/jtopas/source/junit:
+	$experiment_root/jtopas/source/lib/junit.jar:.
+
+1. Installation.
+
+   - original version: 
+	install.sh orig version_number 
+	(version_number: 0, 1, 2, or 3)
+
+   - seeded version: 
+	install_seeded.sh version_number  --> used when you build fault matrix.
+	(version_number: 1, 2, or 3)
+					       
+2. Run tests.
+
+   - TestScripts directory contains testscripts that run test case.
+     The first line of a testscript file defines CLASSPATH, so you need
+     to modify this line to adjust your environment. 
+
+   - Copy testscript file into current directory (~jtopas/scripts) and 
+     run testscript in that directory.

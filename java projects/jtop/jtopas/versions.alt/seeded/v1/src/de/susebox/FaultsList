@@ -1,0 +1,13 @@
+java/io/ExtIOException.cpp:#ifdef FAULT_1
+java/io/ExtIOException.cpp:#ifdef FAULT_2
+java/io/ExtIOException.cpp:#ifdef FAULT_2
+java/io/ExtIOException.cpp:#ifdef FAULT_3
+java/util/AbstractTokenizer.cpp:#ifdef FAULT_4
+java/util/AbstractTokenizer.cpp:#ifdef FAULT_5
+java/util/AbstractTokenizer.cpp:#ifdef FAULT_5
+java/util/AbstractTokenizer.cpp:#ifdef FAULT_6
+java/util/Token.cpp:#ifdef FAULT_7
+java/util/Tokenizer.cpp:#ifdef FAULT_8
+java/lang/ExtIndexOutOfBoundsException.cpp:#ifdef FAULT_9
+java/lang/ExtIndexOutOfBoundsException.cpp:#ifdef FAULT_10
+

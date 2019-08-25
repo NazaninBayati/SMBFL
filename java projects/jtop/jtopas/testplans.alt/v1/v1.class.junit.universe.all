@@ -1,0 +1,11 @@
+CLASSPATH=/nfs/spectre/u5/dohy/Prior/jtopas/source:/nfs/spectre/u5/dohy/Prior/jtopas/source/junit:/nfs/spectre/u5/dohy/Prior/jtopas/source/lib/junit.jar:.
+-P[de.susebox.java.util.TestTokenizerProperties] -X[RemoveTime.sh 1]
+-P[de.susebox.java.util.TestTokenProperties] -X[RemoveTime.sh 2]
+-P[de.susebox.java.util.TestInputStreamTokenizer] -X[RemoveTime.sh 3]
+-P[de.susebox.java.util.TestDifficultSituations] -X[RemoveTime.sh 4]
+-P[de.susebox.java.util.TestEmbeddedTokenizer] -X[RemoveTime.sh 5]
+-P[de.susebox.java.lang.TestExceptionList] -X[RemoveTime.sh 6]
+-P[de.susebox.jtopas.TestPluginTokenizer] -X[RemoveTime.sh 7]
+-P[de.susebox.jtopas.TestTokenizerSpeed] -X[RemoveTime.sh 8]
+-P[de.susebox.jtopas.TestJavaTokenizing] -X[RemoveTime.sh 9]
+-P[de.susebox.TestExceptions] -X[RemoveTime.sh 10]

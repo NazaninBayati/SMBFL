@@ -1,0 +1,16 @@
+
+public class muse {
+	
+
+	int max = 0;
+	
+	int Set_Max(int x, int y){
+		max = -x;
+		if(max < y){
+			max =y;
+		}
+		return max;
+	}
+	
+
+}
