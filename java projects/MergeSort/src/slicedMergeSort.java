@@ -5,7 +5,7 @@ public class slicedMergeSort {
 	  {
 
 	    if (list.length == 1) { //> 1
-	      // Merge sort the first half
+	      // Merge sort first half of the list
 	      int[] firstHalf = new int[list.length / 2];
 
 	      System.arraycopy(list, 0, firstHalf, 0, list.length / 2);
@@ -65,4 +65,4 @@ public class slicedMergeSort {
 	  }
 	}
 
-
+// nazanin bayati
